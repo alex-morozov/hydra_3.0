@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;Hydra&apos;&#x0D;&#x0A;- Original project: &apos;Hydra&apos;&#x0D;&#x0A;- Original element: &apos;com.sikuli.appmanager.OpenHydra.java&apos;" description="Delete element" element1="/functional-tests\/src\/main\/java&lt;com.sikuli.appmanager{OpenHydra.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1414487294998" subPackages="false" version="1.0"/>
+</session>

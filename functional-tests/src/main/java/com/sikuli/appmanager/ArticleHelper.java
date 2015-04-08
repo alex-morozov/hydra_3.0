@@ -1,0 +1,43 @@
+package com.sikuli.appmanager;
+
+
+import org.sikuli.script.FindFailed;
+import org.sikuli.script.Pattern;
+import org.sikuli.script.Screen;
+
+public class ArticleHelper {
+private ArticleHelper articleHelper;
+
+public static String editImageArticle = "/inputScreens/ArticleHelper/editImageArticle.PNG";
+public static String imageAreaArticle = "/inputScreens/ArticleHelper/imageAreaArticle.PNG";
+public static String emptyArticle = "/inputScreens/ArticleHelper/emptyArticle.PNG";
+public static String textAndImageArticle = "/inputScreens/ArticleHelper/textAndImageArticle.PNG";
+public static String addImageArticle = "/inputScreens/ArticleHelper/addImageArticle.PNG";
+public static String linkArticle = "/inputScreens/ArticleHelper/linkArticle.PNG";
+
+static Screen screen = new Screen();
+
+public static void openArticle(String articleName) throws FindFailed{
+Pattern article = new Pattern(articleName);
+screen.wait(article);
+screen.click(article);
+}
+
+public static void setCursor(String emptyArticle) throws FindFailed{
+screen.wait(emptyArticle);
+screen.click(emptyArticle);
+}
+
+public static void openContextMenu(String emptyArticle) throws FindFailed{	
+	screen.wait(emptyArticle);
+	screen.rightClick(emptyArticle);
+}
+
+
+
+
+public ArticleHelper getArticleHelper() {
+	return articleHelper;
+}
+
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Sikuli-tests" verbose="1">
+
+	    <!-- For Hydra -->
+	    <test name="Hydra" preserve-order="true">
+	    <parameter name="sikuli" value="1" />
+	    
+	    <packages>
+	        <package name = "com.sikuli.image"></package>
+	    </packages>
+	    	   	          
+		
+	</test>
+
+</suite>
+
+
+
+
