@@ -60,6 +60,7 @@ public static String textString = "/inputScreens/ImageHelper/textString.PNG";
 public static String relocationCheck = "/inputScreens/ImageHelper/relocationCheck.PNG";
 public static String copyPasteCheck = "/inputScreens/ImageHelper/copyPasteCheck.PNG";
 public static String dublicationCheck = "/inputScreens/ImageHelper/dublicationCheck.PNG";
+public static String undoRelocationCheck = "/inputScreens/ImageHelper/undoRelocationCheck.PNG";
 
 public static String imageFilePath = "C:/Users/alexey_morozov/Documents/AutotestsHydra/Image/source";
 

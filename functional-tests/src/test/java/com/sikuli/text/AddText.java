@@ -26,5 +26,15 @@ public class AddText extends TestBase {
 		screen.paste("Пример текста");
 		ObjectHelper.finalCheck(TextHelper.textCheck);
 	}
+	
+	@Parameters({ "sikuli" })	
+	@Test
+		public void addTextDirectly(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		BookHelper.openBook(BookManager.image, BookManager.openBook);
+		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
+		ArticleHelper.setCursor(ArticleHelper.emptyArticle);			  
+		screen.paste("Пример текста");
+		ObjectHelper.finalCheck(TextHelper.textCheck);
+	}
 
 }
