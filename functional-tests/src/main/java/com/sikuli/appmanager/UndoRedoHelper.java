@@ -23,4 +23,10 @@ public class UndoRedoHelper {
 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		robot.keyRelease(KeyEvent.VK_Y);
 		}
+	
+	public static void undoRedoAction () throws AWTException{
+		undoAction();
+		redoAction();	      
+		}
+	
 }

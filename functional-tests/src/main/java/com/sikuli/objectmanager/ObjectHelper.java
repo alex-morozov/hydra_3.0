@@ -65,9 +65,16 @@ public class ObjectHelper {
 		screen.wait(openBook);
 		screen.click(openBook);		
 		robot.keyPress(KeyEvent.VK_ENTER); 
-		robot.keyRelease(KeyEvent.VK_ENTER);	
-		
+		robot.keyRelease(KeyEvent.VK_ENTER);			
 		}
+	
+	public static void confirmAction() throws AWTException{
+		Robot robot = new Robot();		
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+	}
 
 	public ObjectHelper getObjectHelper() {
 		return objectHelper;

@@ -24,6 +24,7 @@ public class AddText extends TestBase {
 		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
 		AddHelper.addThroughContextMenu(AddHelper.addText);	  
 		screen.paste("Пример текста");
+		ObjectHelper.confirmAction();
 		ObjectHelper.finalCheck(TextHelper.textCheck);
 	}
 	
@@ -33,7 +34,7 @@ public class AddText extends TestBase {
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
 		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
 		ArticleHelper.setCursor(ArticleHelper.emptyArticle);			  
-		screen.paste("Пример текста");
+		screen.paste("Пример текста");		
 		ObjectHelper.finalCheck(TextHelper.textCheck);
 	}
 
