@@ -12,6 +12,7 @@ public static String editImageArticle = "/inputScreens/ArticleHelper/editImageAr
 public static String imageAreaArticle = "/inputScreens/ArticleHelper/imageAreaArticle.PNG";
 public static String emptyArticle = "/inputScreens/ArticleHelper/emptyArticle.PNG";
 public static String textAndImageArticle = "/inputScreens/ArticleHelper/textAndImageArticle.PNG";
+public static String textArticle = "/inputScreens/ArticleHelper/textArticle.PNG";
 public static String addImageArticle = "/inputScreens/ArticleHelper/addImageArticle.PNG";
 public static String linkArticle = "/inputScreens/ArticleHelper/linkArticle.PNG";
 

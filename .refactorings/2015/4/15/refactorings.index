@@ -1,2 +1,13 @@
 1428492969475	Rename package 'java.com.sikuli.text'
 1428492991356	Delete element
+1428576759847	Move files
+1428580789744	Rename resource 'showPanelStyle.PNG'
+1428582004841	Extract method 'openContextMenu'
+1428582049215	Move member 'openContextMenu'
+1428582404763	Extract method 'editStyleFromPanel'
+1428582450960	Move member 'editStyleFromPanel'
+1428582823329	Delete element
+1428583222839	Extract method 'changeFont'
+1428583242014	Move member 'changeFont'
+1428585953001	Extract method 'changeRelativeSize'
+1428585974817	Move member 'changeRelativeSize'

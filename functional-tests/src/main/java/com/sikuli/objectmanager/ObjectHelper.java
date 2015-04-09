@@ -6,11 +6,14 @@ import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 
 import org.sikuli.script.App;
+import org.sikuli.script.Button;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Pattern;
 import org.sikuli.script.Region;
 import org.sikuli.script.Screen;
 
+import com.sikuli.appmanager.ArticleHelper;
+import com.sikuli.appmanager.EditHelper;
 import com.sikuli.appmanager.StartHydra;
 
 public class ObjectHelper {
@@ -52,6 +55,18 @@ public class ObjectHelper {
 		screen.paste(value);
 	}
 	
+	public static void highlightAndDeleteAllContent(String object) throws FindFailed, AWTException	{
+		ArticleHelper.setCursor(object);
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_A);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyRelease(KeyEvent.VK_A);
+		robot.keyRelease(KeyEvent.VK_DELETE);
+		robot.keyRelease(KeyEvent.VK_DELETE);
+	}
+	
+	
 
 	public static void openFile (String fileAdress, String fileImage) throws FindFailed, InterruptedException, AWTException{
 		Robot robot = new Robot();		
@@ -78,6 +93,13 @@ public class ObjectHelper {
 
 	public ObjectHelper getObjectHelper() {
 		return objectHelper;
+	}
+
+	public static void openContextMenu(String object) throws FindFailed {
+		findObject(object);
+		screen.mouseMove(object);
+		screen.mouseDown(Button.RIGHT);
+		screen.mouseUp(Button.RIGHT);
 	}
 
 }

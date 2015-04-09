@@ -11,7 +11,7 @@ import com.sikuli.objectmanager.ObjectHelper;
 
 public class EditHelper {
 	private EditHelper editHelper;	
-	static Screen screen = new Screen();
+	public static Screen screen = new Screen();
 	
 	public static String editSubObjectPencilButton = "/inputScreens/EditHelper/editSubObjectPencilButton.PNG";
 	public static String editSubObjectRectangleButton = "/inputScreens/EditHelper/editSubObjectRectangleButton.PNG";
@@ -27,14 +27,11 @@ public EditHelper getEditHelper() {
 	}
 
 	public static void editObject(String object, String window) throws FindFailed, AWTException	{
-	ObjectHelper.findObject(object);
-	screen.mouseMove(object);
-	screen.mouseDown(Button.RIGHT);
-	screen.mouseUp(Button.RIGHT);
+	ObjectHelper.openContextMenu(object);
 	ObjectHelper.clickButton(EditHelper.editObjectButton);	
 	screen.wait(window);
 	}
-	
+
 	public static void openBookAndEditObject(String article, String object, String window) throws FindFailed, AWTException, InterruptedException	{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
 		ArticleHelper.openArticle(article);
