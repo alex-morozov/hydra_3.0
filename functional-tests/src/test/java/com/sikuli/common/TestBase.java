@@ -10,6 +10,11 @@ import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.CopyOption;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
+
 import javax.imageio.ImageIO;
 import org.sikuli.basics.Settings;
 import org.sikuli.script.FindFailed;
@@ -20,9 +25,11 @@ import org.testng.Reporter;
 import org.testng.TestListenerAdapter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
+import com.google.common.io.Files;
 import com.sikuli.appmanager.StartHydra;
 
 
@@ -30,6 +37,7 @@ import com.sikuli.appmanager.StartHydra;
 public class TestBase extends TestListenerAdapter {
 	public StartHydra app;
 	protected static Screen screen = new Screen();
+	String failureScreensFolder = "\\test-output\\failureScreens\\";
 		
 	@Parameters({"sikuli"})
 	@BeforeMethod(alwaysRun = true)
@@ -47,22 +55,25 @@ public class TestBase extends TestListenerAdapter {
 			File file = new File("");
 			Reporter.setCurrentTestResult(result);
 			Reporter.log(file.getAbsolutePath());
-			if (file.delete());
+			
+			
+			new File(file.getAbsolutePath()
+					 + failureScreensFolder).mkdir();
 			
 			String packageFolder = getClass().getPackage().getName();
 			 new File(file.getAbsolutePath()
-					 + "\\failureScreens\\"
+					 + failureScreensFolder
 					  + packageFolder).mkdir();
 						
 			String classFolder = getClass().getSimpleName();			
 			 new File(file.getAbsolutePath()
-					 + "\\failureScreens\\"
+					 + failureScreensFolder
 					  + packageFolder
 					   + "\\" + classFolder).mkdir();
 			 
 			 String methodFolder = result.getMethod().getMethodName();
 			  new File(file.getAbsolutePath()
-					  + "\\failureScreens\\"
+					  + failureScreensFolder
 					   + packageFolder
 					    + "\\"  + classFolder
 					     + "\\" + methodFolder).mkdir();
@@ -71,15 +82,15 @@ public class TestBase extends TestListenerAdapter {
 						.createScreenCapture(new Rectangle(Toolkit
 								.getDefaultToolkit().getScreenSize()));
 				ImageIO.write(image, "jpg", new File(file.getAbsolutePath()
-						+ "\\failureScreens" 
-						  + "\\" + packageFolder
+						+ failureScreensFolder 
+						  + packageFolder
 						   + "\\" + classFolder
 						    + "\\" + methodFolder
 						     + "\\" + failureImageFileName));
 				System.out.println("Test failed - see screenshot "
 						+ failureImageFileName + " in "
-						 + file.getAbsolutePath() + "\\failureScreens"
-						  + "\\" + packageFolder
+						 + file.getAbsolutePath() + failureScreensFolder
+						  + packageFolder
 						   + "\\" + classFolder
 						    + "\\" + methodFolder
 						     + "\\" + failureImageFileName);
@@ -91,13 +102,23 @@ public class TestBase extends TestListenerAdapter {
 	}
 	
 	
-	
 	 @AfterMethod(alwaysRun = true)
          public static void zKillProcess() throws InterruptedException, IOException {
 		 Runtime.getRuntime().exec("TASKKILL /F /IM Hydra_Application.exe");
 			Thread.sleep(1000);			 
 		}
 	 
+	 /*//насколько я понял, копировать можно только через абсолютные пути, что не очень изящно
+	 @AfterSuite
+	 public void copyLog() throws  IOException {
+		 File FROM = new File("\\test-output\\index.html");
+		 File TO = new File(failureScreensFolder + "\\index.html");		    
+		    Files.copy(FROM, TO);
+		  }
+		 		
+		 		 */
+		}
+	 
 	 
 	
-}
+
