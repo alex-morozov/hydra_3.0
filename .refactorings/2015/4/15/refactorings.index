@@ -11,3 +11,5 @@
 1428583242014	Move member 'changeFont'
 1428585953001	Extract method 'changeRelativeSize'
 1428585974817	Move member 'changeRelativeSize'
+1428670951855	Rename method 'toKillProcess'
+1428671012543	Rename method 'tearDown'

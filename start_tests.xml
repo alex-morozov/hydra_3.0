@@ -8,6 +8,7 @@
 	    
 	    <packages>
 	        <package name = "com.sikuli.image"></package>
+	        <package name = "com.sikuli.text"></package>
 	    </packages>
 	    	   	          
 		

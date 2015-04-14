@@ -30,8 +30,7 @@ public class AddImage extends TestBase{
 	public void addThroughContextMenu(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
 		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
-		AddHelper.addThroughContextMenu(AddHelper.addImage);
+		ArticleHelper.setCursor(ArticleHelper.emptyArticle);			
 		ObjectHelper.clickButton(AddHelper.addFileButton);	
 		ObjectHelper.openFile(ImageHelper.imageFilePath, ImageHelper.imageFile);
 		ObjectHelper.clickButton(ObjectHelper.ok);		

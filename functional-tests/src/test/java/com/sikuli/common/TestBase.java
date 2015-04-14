@@ -39,25 +39,50 @@ public class TestBase extends TestListenerAdapter {
 		Settings.MoveMouseDelay = 0;
 			}
 
-	
+			
 	@AfterMethod(alwaysRun = true)
 	public void tearDown(ITestResult result) throws IOException {
 		if (!result.isSuccess()) {
-			String failureImageFileName = result.getMethod().getMethodName()
-					+ ".jpg";
+			String failureImageFileName = "failureScreen.jpg";
 			File file = new File("");
 			Reporter.setCurrentTestResult(result);
 			Reporter.log(file.getAbsolutePath());
 			if (file.delete());
+			
+			String packageFolder = getClass().getPackage().getName();
+			 new File(file.getAbsolutePath()
+					 + "\\failureScreens\\"
+					  + packageFolder).mkdir();
+						
+			String classFolder = getClass().getSimpleName();			
+			 new File(file.getAbsolutePath()
+					 + "\\failureScreens\\"
+					  + packageFolder
+					   + "\\" + classFolder).mkdir();
+			 
+			 String methodFolder = result.getMethod().getMethodName();
+			  new File(file.getAbsolutePath()
+					  + "\\failureScreens\\"
+					   + packageFolder
+					    + "\\"  + classFolder
+					     + "\\" + methodFolder).mkdir();
 			try {
 				BufferedImage image = new Robot()
 						.createScreenCapture(new Rectangle(Toolkit
 								.getDefaultToolkit().getScreenSize()));
 				ImageIO.write(image, "jpg", new File(file.getAbsolutePath()
-						+ "\\failureScreens\\" + failureImageFileName));
+						+ "\\failureScreens" 
+						  + "\\" + packageFolder
+						   + "\\" + classFolder
+						    + "\\" + methodFolder
+						     + "\\" + failureImageFileName));
 				System.out.println("Test failed - see screenshot "
 						+ failureImageFileName + " in "
-						+ file.getAbsolutePath() + "\\failureScreens\\");
+						 + file.getAbsolutePath() + "\\failureScreens"
+						  + "\\" + packageFolder
+						   + "\\" + classFolder
+						    + "\\" + methodFolder
+						     + "\\" + failureImageFileName);
 			} 
 			catch (Exception e) {
 				e.printStackTrace();
@@ -65,10 +90,14 @@ public class TestBase extends TestListenerAdapter {
 		}
 	}
 	
+	
+	
 	 @AfterMethod(alwaysRun = true)
-         public static void toKillProcess() throws InterruptedException, IOException {
+         public static void zKillProcess() throws InterruptedException, IOException {
 		 Runtime.getRuntime().exec("TASKKILL /F /IM Hydra_Application.exe");
 			Thread.sleep(1000);			 
 		}
+	 
+	 
 	
 }
