@@ -55,6 +55,11 @@ public class ObjectHelper {
 		screen.paste(value);
 	}
 	
+	public static void typeFieldValue(String field,String value) throws FindFailed{
+		ObjectHelper.clickButton(field);		
+		screen.type(value);
+	}
+	
 	public static void highlightAndDeleteAllContent(String object) throws FindFailed, AWTException	{
 		ArticleHelper.setCursor(object);
 		Robot robot = new Robot();

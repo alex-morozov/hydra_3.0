@@ -208,7 +208,7 @@ public class AddImage extends TestBase{
 	}
 
 	@Parameters({ "sikuli" })
-	@Test  ( groups = ("not finished"))
+	@Test  ( )
 	public void imageAreaEditLinkArticle(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		ImageHelper.addImageThroughToolbar();
 		ObjectHelper.clickButton(ImageHelper.tabAreas);
@@ -230,7 +230,7 @@ public class AddImage extends TestBase{
 		ObjectHelper.clickButton(ImageHelper.imageAreaListElementEditImageWindow);
 		ObjectHelper.clickButton(EditHelper.editSubObjectRectangleButton);		
 		ObjectHelper.clickButton(ImageHelper.editImageAreaLinkButton);
-		ObjectHelper.finalCheck(ArticleHelper.imageAreaArticle);		// должен падать из-за неполного соответствия
+		ObjectHelper.finalCheck(ArticleHelper.imageAreaArticle);		
 	}
 	
 	@Parameters({ "sikuli" })

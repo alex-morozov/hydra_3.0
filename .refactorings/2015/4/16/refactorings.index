@@ -1,3 +1,14 @@
 1428920372542	Delete element
 1428921245863	Delete element
 1428921585727	Delete element
+1429168623282	Rename resource 'colorBasic.PNG'
+1429172954146	Delete element
+1429172957513	Delete element
+1429175944925	Rename resource 'backgroundBasic.PNG'
+1429176404720	Extract method 'changeFontColor'
+1429176603755	Extract method 'changeBackgroundColour'
+1429178303341	Extract method 'changeLanguage'
+1429187694100	Extract method 'changeAbsoluteSize'
+1429188561495	Delete element
+1429189653044	Extract method 'createStyleName'
+1429189748739	Move member 'createStyleName'

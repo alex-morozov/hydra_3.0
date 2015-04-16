@@ -1,6 +1,8 @@
 package com.sikuli.text;
 
 import java.awt.AWTException;
+
+import org.sikuli.script.App;
 import org.sikuli.script.FindFailed;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -35,6 +37,39 @@ public class AddText extends TestBase {
 		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
 		ArticleHelper.setCursor(ArticleHelper.emptyArticle);			  
 		screen.paste("Пример текста");		
+		ObjectHelper.finalCheck(TextHelper.textCheck);
+	}
+	
+	@Parameters({ "sikuli" })	
+	@Test
+		public void editStyle(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		BookHelper.openBook(BookManager.image, BookManager.openBook);
+		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
+		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
+		AddHelper.addThroughContextMenu(AddHelper.addText);	  
+		screen.paste("Пример текста");
+		ObjectHelper.clickButton(EditHelper.editSubObjectPencilButton);
+		TextHelper.changeAbsoluteSize();
+		ObjectHelper.clickButton(ObjectHelper.ok);	
+		App.focusedWindow().click();
+		ObjectHelper.confirmAction();
+		ObjectHelper.finalCheck(TextHelper.textCheck);
+	}
+	
+	@Parameters({ "sikuli" })	
+	@Test
+		public void addStyle(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		BookHelper.openBook(BookManager.image, BookManager.openBook);
+		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
+		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
+		AddHelper.addThroughContextMenu(AddHelper.addText);	  
+		screen.paste("Пример текста");
+		ObjectHelper.clickButton(AddHelper.addSubObjectPlusButton);
+		TextHelper.createStyleName();
+		TextHelper.changeAbsoluteSize();
+		ObjectHelper.clickButton(ObjectHelper.ok);	
+		App.focusedWindow().click();
+		ObjectHelper.confirmAction();
 		ObjectHelper.finalCheck(TextHelper.textCheck);
 	}
 

@@ -3,19 +3,26 @@ package com.sikuli.objectmanager;
 import org.sikuli.script.FindFailed;
 
 public class TextHelper {
+	public static String changedTextCheck = "/inputScreens/TextHelper/changedTextCheck.PNG";
 	public static String textCheck = "/inputScreens/TextHelper/textCheck.PNG";
 	public static String absoluteFontSizeBasic = "/inputScreens/TextHelper/TextStyle/absoluteFontSizeBasic.PNG";
-	public static String backgroundBasic = "/inputScreens/TextHelper/TextStyle/backgroundBasic.PNG";
+	public static String absoluteFontChangedSize = "/inputScreens/TextHelper/TextStyle/absoluteFontChangedSize.PNG";
+	public static String backgroundColorBasic = "/inputScreens/TextHelper/TextStyle/backgroundColorBasic.PNG";
+	public static String backgroundColorPink = "/inputScreens/TextHelper/TextStyle/backgroundColorPink.PNG";
 	public static String bigRelativeSize = "/inputScreens/TextHelper/TextStyle/bigRelativeSize.PNG";
 	public static String bold = "/inputScreens/TextHelper/TextStyle/bold.PNG";
 	public static String boldCheck = "/inputScreens/TextHelper/TextStyle/boldCheck.PNG";
-	public static String colorBasic = "/inputScreens/TextHelper/TextStyle/colorBasic.PNG";
+	public static String colorPink = "/inputScreens/TextHelper/TextStyle/colorPink.PNG";
+	public static String emptyStyleName = "/inputScreens/TextHelper/TextStyle/emptyStyleName.PNG";
+	public static String fontColorBasic = "/inputScreens/TextHelper/TextStyle/fontColorBasic.PNG";
+	public static String fontColorPink = "/inputScreens/TextHelper/TextStyle/fontColorPink.PNG";
 	public static String fontNameBasic = "/inputScreens/TextHelper/TextStyle/fontNameBasic.PNG";
 	public static String italic = "/inputScreens/TextHelper/TextStyle/italic.PNG";
 	public static String italicCheck = "/inputScreens/TextHelper/TextStyle/italicCheck.PNG";
 	public static String languageBasic = "/inputScreens/TextHelper/TextStyle/languageBasic.PNG";
 	public static String lowerIndex = "/inputScreens/TextHelper/TextStyle/lowerIndex.PNG";
 	public static String lowerIndexCheck = "/inputScreens/TextHelper/TextStyle/lowerIndexCheck.PNG";
+	public static String newStyle = "/inputScreens/TextHelper/StylePanel/newStyle.PNG";
 	public static String relativeSizeChecked = "/inputScreens/TextHelper/TextStyle/relativeSizeChecked.PNG";
 	public static String relativeSizeUnchecked = "/inputScreens/TextHelper/TextStyle/relativeSizeUnchecked.PNG";
 	public static String smallRelativeSize = "/inputScreens/TextHelper/TextStyle/smallRelativeSize.PNG";
@@ -37,6 +44,21 @@ public class TextHelper {
 		ObjectHelper.openContextMenu(styleForEdit);
 		ObjectHelper.clickButton(edit);
 	}
+	
+	public static void editStyleFromPanel(String style) throws FindFailed {
+		ObjectHelper.openContextMenu(style);
+		ObjectHelper.clickButton(edit);
+	}
+	
+	public static void createStyleFromPanel() throws FindFailed {
+		ObjectHelper.openContextMenu(styleForEdit);
+		ObjectHelper.clickButton(create);
+	}
+	
+	public static void dublicateStyleFromPanel() throws FindFailed {
+		ObjectHelper.openContextMenu(styleForEdit);
+		ObjectHelper.clickButton(dublicate);
+	}
 
 	public static void changeFont() throws FindFailed {
 		ObjectHelper.clickButton(fontNameBasic);
@@ -46,6 +68,31 @@ public class TextHelper {
 	public static void changeRelativeSize() throws FindFailed {
 		ObjectHelper.clickButton(smallRelativeSize);	
 		ObjectHelper.clickButton(bigRelativeSize);
+	}
+	
+	public static void changeFontColor() throws FindFailed {
+		ObjectHelper.clickButton(TextHelper.fontColorBasic);
+		ObjectHelper.clickButton(TextHelper.colorPink);	
+		ObjectHelper.clickButtonInCertainArea(ObjectHelper.ok);
+	}
+	
+	public static void changeBackgroundColour() throws FindFailed {
+		ObjectHelper.clickButton(TextHelper.backgroundColorBasic);
+		ObjectHelper.clickButton(TextHelper.colorPink);	
+		ObjectHelper.clickButtonInCertainArea(ObjectHelper.ok);
+	}
+	
+	public static void changeLanguage() throws FindFailed {
+		ObjectHelper.clickButton(TextHelper.languageBasic);	
+		ObjectHelper.clickButton(TextHelper.swedLanguage);
+	}
+	
+	public static void changeAbsoluteSize() throws FindFailed {
+		ObjectHelper.typeFieldValue(TextHelper.absoluteFontSizeBasic, "22");
+	}
+
+	public static void createStyleName() throws FindFailed {
+		ObjectHelper.typeFieldValue(emptyStyleName,"New Style");
 	}
 	
 	

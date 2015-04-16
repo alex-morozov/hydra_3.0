@@ -48,7 +48,7 @@ public class TestBase extends TestListenerAdapter {
 			}
 
 			
-	@AfterMethod(alwaysRun = true)
+	@AfterMethod(alwaysRun = true)	
 	public void tearDown(ITestResult result) throws IOException {
 		if (!result.isSuccess()) {
 			String failureImageFileName = "failureScreen.jpg";
