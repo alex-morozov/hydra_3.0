@@ -61,14 +61,25 @@ public class ObjectHelper {
 	}
 	
 	public static void highlightAndDeleteAllContent(String object) throws FindFailed, AWTException	{
+		Robot robot = new Robot();
+		highlightAllContent(object);
+		robot.keyRelease(KeyEvent.VK_DELETE);
+		robot.keyRelease(KeyEvent.VK_DELETE);
+	}
+
+	/**
+	 * @param object
+	 * @return
+	 * @throws FindFailed
+	 * @throws AWTException
+	 */
+	public static void  highlightAllContent(String object) throws FindFailed, AWTException {
 		ArticleHelper.setCursor(object);
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_A);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_A);
-		robot.keyRelease(KeyEvent.VK_DELETE);
-		robot.keyRelease(KeyEvent.VK_DELETE);
+		robot.keyRelease(KeyEvent.VK_A);		
 	}
 	
 	

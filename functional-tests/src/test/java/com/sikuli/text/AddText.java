@@ -12,7 +12,6 @@ import com.sikuli.appmanager.BookHelper;
 import com.sikuli.appmanager.BookManager;
 import com.sikuli.appmanager.EditHelper;
 import com.sikuli.common.TestBase;
-import com.sikuli.objectmanager.ImageHelper;
 import com.sikuli.objectmanager.ObjectHelper;
 import com.sikuli.objectmanager.TextHelper;
 

@@ -1,9 +1,20 @@
 package com.sikuli.objectmanager;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
 import org.sikuli.script.FindFailed;
 
 public class TextHelper {
+	public static String changedLetterCheck = "/inputScreens/TextHelper/changedLetterCheck.PNG";
+	public static String relocationCheck = "/inputScreens/TextHelper/relocationCheck.PNG";
+	public static String dublicationCheck = "/inputScreens/TextHelper/dublicationCheck.PNG";
 	public static String changedTextCheck = "/inputScreens/TextHelper/changedTextCheck.PNG";
+	public static String highlightedString = "/inputScreens/TextHelper/highlightedString.PNG";
+	public static String stringFinish = "/inputScreens/TextHelper/stringFinish.PNG";
+	public static String stringStart = "/inputScreens/TextHelper/stringStart.PNG";
+	public static String textRelocationFinish = "/inputScreens/TextHelper/textRelocationFinish.PNG";
 	public static String textCheck = "/inputScreens/TextHelper/textCheck.PNG";
 	public static String absoluteFontSizeBasic = "/inputScreens/TextHelper/TextStyle/absoluteFontSizeBasic.PNG";
 	public static String absoluteFontChangedSize = "/inputScreens/TextHelper/TextStyle/absoluteFontChangedSize.PNG";
@@ -38,6 +49,8 @@ public class TextHelper {
 	public static String dublicate = "/inputScreens/TextHelper/StylePanel/dublicate.PNG";
 	public static String edit = "/inputScreens/TextHelper/StylePanel/edit.PNG";
 	public static String styleForEdit = "/inputScreens/TextHelper/StylePanel/styleForEdit.PNG";
+	public static String styleToEditText = "/inputScreens/TextHelper/TextStyle/styleToEditText.PNG";
+	public static String styleFromContextMenu = "/inputScreens/TextHelper/TextStyle/styleFromContextMenu.PNG";
 	public static String use = "/inputScreens/TextHelper/StylePanel/use.PNG";
 	
 	public static void editStyleFromPanel() throws FindFailed {
@@ -93,6 +106,17 @@ public class TextHelper {
 
 	public static void createStyleName() throws FindFailed {
 		ObjectHelper.typeFieldValue(emptyStyleName,"New Style");
+	}
+	
+	public static void highlightOneWordToRight(String object) throws FindFailed, AWTException {
+		Robot robot = new Robot();
+		ObjectHelper.clickButton(object);
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_SHIFT);
+		robot.keyPress(KeyEvent.VK_RIGHT);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyRelease(KeyEvent.VK_SHIFT);
+		robot.keyRelease(KeyEvent.VK_RIGHT);
 	}
 	
 	

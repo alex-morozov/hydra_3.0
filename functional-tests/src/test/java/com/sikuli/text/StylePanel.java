@@ -6,7 +6,6 @@ import org.sikuli.script.FindFailed;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.sikuli.appmanager.AddHelper;
 import com.sikuli.appmanager.ArticleHelper;
 import com.sikuli.appmanager.BookHelper;
 import com.sikuli.appmanager.BookManager;
@@ -217,6 +216,17 @@ public class StylePanel extends TestBase{
 		TextHelper.changeBackgroundColour();
 		ObjectHelper.clickButton(ObjectHelper.ok);
 		ObjectHelper.finalCheck(TextHelper.newStyle);
+	}		
+	
+	@Parameters({ "sikuli" })	
+	@Test
+		public void editTextThroughStylePanel(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		BookHelper.openBook(BookManager.image, BookManager.openBook);
+		ArticleHelper.openArticle(ArticleHelper.textArticle);		
+		ObjectHelper.highlightAllContent(TextHelper.textCheck);
+		ObjectHelper.clickButton(TextHelper.showStylePanel);
+		ObjectHelper.clickButton(TextHelper.styleToEditText);		
+		ObjectHelper.finalCheck(TextHelper.changedTextCheck);
 	}		
 	
 	@Parameters({ "sikuli" })	

@@ -12,3 +12,5 @@
 1429188561495	Delete element
 1429189653044	Extract method 'createStyleName'
 1429189748739	Move member 'createStyleName'
+1429192989840	Extract method 'highlightAllContent'
+1429273796367	Delete element
