@@ -1,3 +1,8 @@
 1429529686371	Rename method 'relocateObject'
 1429529719730	Rename method 'relocateNonTextObject'
 1429604884972	Rename method 'copyPasteText'
+1429608412831	Rename method 'addThroughContextMenu'
+1429617449666	Rename local variable 'emptyArticle'
+1429617564252	Rename local variable 'object'
+1429619598698	Rename method 'addThroughToolbar'
+1429619606193	Rename method 'addThroughContextMenu'

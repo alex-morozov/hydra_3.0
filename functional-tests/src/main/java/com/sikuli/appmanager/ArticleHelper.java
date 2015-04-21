@@ -30,9 +30,9 @@ screen.wait(emptyArticle);
 screen.click(emptyArticle);
 }
 
-public static void openContextMenu(String emptyArticle) throws FindFailed{	
-	screen.wait(emptyArticle);
-	screen.rightClick(emptyArticle);
+public static void openContextMenu(String object) throws FindFailed{	
+	screen.wait(object);
+	screen.rightClick(object);
 }
 
 

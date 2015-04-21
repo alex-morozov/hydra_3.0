@@ -18,7 +18,7 @@ public class DublicateImage extends TestBase {
 	
 	@Parameters({ "sikuli" })
 	@Test
-	public static void dublicateImage(String sikuli) throws FindFailed, InterruptedException, AWTException{		
+	public void dublicateImage(String sikuli) throws FindFailed, InterruptedException, AWTException{		
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
 		ArticleHelper.openArticle(ArticleHelper.textAndImageArticle);
 		DublicateHelper.dublicateObject(ImageHelper.image, ImageHelper.idImage, ImageHelper.textString);

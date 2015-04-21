@@ -18,18 +18,7 @@ import com.sikuli.common.TestBase;
 import com.sikuli.objectmanager.ImageHelper;
 import com.sikuli.objectmanager.ObjectHelper;
 
-public class UndoImageActions extends TestBase {
-	
-	@Parameters({ "sikuli" })
-	@Test
-	public void undoAddImage(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		ImageHelper.addImageThroughToolbar();
-		ObjectHelper.clickButton(ObjectHelper.ok);		
-		UndoRedoHelper.undoAction();
-		ImageHelper.image.isEmpty();	
-	}
-
-	
+public class UndoImageActions extends TestBase {	
 	@Parameters({ "sikuli" })
 	@Test
 	public void undoCopyPasteImage(String sikuli) throws FindFailed, InterruptedException, AWTException{
@@ -62,6 +51,15 @@ public class UndoImageActions extends TestBase {
 	
 	@Parameters({ "sikuli" })
 	@Test
+	public void undoAddImage(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		ImageHelper.addImageThroughToolbar();
+		ObjectHelper.clickButton(ObjectHelper.ok);		
+		UndoRedoHelper.undoAction();
+		ImageHelper.image.isEmpty();	
+	}
+	
+	@Parameters({ "sikuli" })
+	@Test
 	public void undoRelocateImage(String sikuli) throws FindFailed, InterruptedException, AWTException{				
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
 		ArticleHelper.openArticle(ArticleHelper.textAndImageArticle);
@@ -69,6 +67,7 @@ public class UndoImageActions extends TestBase {
 		UndoRedoHelper.undoAction();
 		ObjectHelper.finalCheck(ImageHelper.undoRelocationCheck);
 	}
+	
 	
 	@Parameters({ "sikuli" })
 	@Test

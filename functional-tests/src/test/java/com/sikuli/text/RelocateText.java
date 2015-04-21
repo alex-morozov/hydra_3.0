@@ -16,7 +16,7 @@ import com.sikuli.objectmanager.TextHelper;
 public class RelocateText extends TestBase{
 	@Parameters({ "sikuli" })
 	@Test
-	public static void relocateText(String sikuli) throws FindFailed, InterruptedException, AWTException{		
+	public void relocateText(String sikuli) throws FindFailed, InterruptedException, AWTException{		
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
 		ArticleHelper.openArticle(ArticleHelper.textAndImageArticle);
 		RelocateHelper.relocateText(TextHelper.stringStart, TextHelper.stringFinish, TextHelper.highlightedString, TextHelper.textRelocationFinish);

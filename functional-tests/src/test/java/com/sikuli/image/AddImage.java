@@ -19,7 +19,7 @@ public class AddImage extends TestBase{
 	
 	@Parameters({ "sikuli" })	
 	@Test
-		public void addThroughToolbar(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void addImageThroughToolbar(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		ImageHelper.addImageThroughToolbar();
 		ObjectHelper.clickButton(ObjectHelper.ok);		
 	    EditHelper.editObject(ImageHelper.image, ImageHelper.editWindowTabSize);		    
@@ -27,7 +27,7 @@ public class AddImage extends TestBase{
 	
 	@Parameters({ "sikuli" })
 	@Test
-	public void addThroughContextMenu(String sikuli) throws FindFailed, InterruptedException, AWTException{
+	public void addImageThroughContextMenu(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
 		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
 		ArticleHelper.setCursor(ArticleHelper.emptyArticle);			

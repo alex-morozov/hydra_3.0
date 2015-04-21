@@ -186,7 +186,7 @@ public class EditImage extends TestBase{
 		ObjectHelper.clickButton(ImageHelper.imageAreaListElementEditImageWindow);
 		ObjectHelper.clickButton(EditHelper.editSubObjectRectangleButton);		
 		ObjectHelper.clickButton(ImageHelper.editImageAreaLinkButton);
-		ObjectHelper.finalCheck(ArticleHelper.imageAreaArticle);		// должен падать из-за неполного соответствия
+		ObjectHelper.finalCheck(ArticleHelper.imageAreaArticle);		
 	}
 
 }

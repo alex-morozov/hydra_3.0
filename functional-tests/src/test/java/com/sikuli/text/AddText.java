@@ -19,11 +19,11 @@ public class AddText extends TestBase {
 	
 	@Parameters({ "sikuli" })	
 	@Test
-		public void addThroughContextMenu(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void addTextThroughContextMenu(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
 		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
 		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
-		AddHelper.addThroughContextMenu(AddHelper.addText);	  
+		AddHelper.addThroughContextMenu(ArticleHelper.emptyArticle, AddHelper.addText);	  
 		screen.paste("Пример текста");
 		ObjectHelper.confirmAction();
 		ObjectHelper.finalCheck(TextHelper.textCheck);
@@ -45,7 +45,7 @@ public class AddText extends TestBase {
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
 		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
 		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
-		AddHelper.addThroughContextMenu(AddHelper.addText);	  
+		AddHelper.addThroughContextMenu(ArticleHelper.emptyArticle, AddHelper.addText);	  
 		screen.paste("Пример текста");
 		ObjectHelper.clickButton(EditHelper.editSubObjectPencilButton);
 		TextHelper.changeAbsoluteSize();
@@ -61,7 +61,7 @@ public class AddText extends TestBase {
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
 		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
 		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
-		AddHelper.addThroughContextMenu(AddHelper.addText);	  
+		AddHelper.addThroughContextMenu(ArticleHelper.emptyArticle, AddHelper.addText);	  
 		screen.paste("Пример текста");
 		ObjectHelper.clickButton(AddHelper.addSubObjectPlusButton);
 		TextHelper.createStyleName();

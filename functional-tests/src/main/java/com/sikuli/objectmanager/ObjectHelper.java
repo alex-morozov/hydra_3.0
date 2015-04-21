@@ -2,19 +2,14 @@ package com.sikuli.objectmanager;
 
 import java.awt.AWTException;
 import java.awt.Robot;
-import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
-
 import org.sikuli.script.App;
 import org.sikuli.script.Button;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Pattern;
-import org.sikuli.script.Region;
 import org.sikuli.script.Screen;
-
 import com.sikuli.appmanager.ArticleHelper;
-import com.sikuli.appmanager.EditHelper;
-import com.sikuli.appmanager.StartHydra;
+
 
 public class ObjectHelper {
 	private ObjectHelper objectHelper;
@@ -67,12 +62,7 @@ public class ObjectHelper {
 		robot.keyRelease(KeyEvent.VK_DELETE);
 	}
 
-	/**
-	 * @param object
-	 * @return
-	 * @throws FindFailed
-	 * @throws AWTException
-	 */
+	
 	public static void  highlightAllContent(String object) throws FindFailed, AWTException {
 		ArticleHelper.setCursor(object);
 		Robot robot = new Robot();

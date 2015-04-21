@@ -18,7 +18,7 @@ public class CopyPasteText extends TestBase{
 	
 	@Parameters({ "sikuli" })
 	@Test
-	public static void copyPasteFormattedText(String sikuli) throws FindFailed, InterruptedException, AWTException{		
+	public void copyPasteFormattedText(String sikuli) throws FindFailed, InterruptedException, AWTException{		
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
 		ArticleHelper.openArticle(ArticleHelper.textAndImageArticle);
 		CopyPasteHelper.copyPasteFormattedText(TextHelper.stringStart, TextHelper.stringFinish, TextHelper.textRelocationFinish);				
@@ -28,7 +28,7 @@ public class CopyPasteText extends TestBase{
 	
 	@Parameters({ "sikuli" })
 	@Test
-	public static void copyPasteNonFormattedText(String sikuli) throws FindFailed, InterruptedException, AWTException{		
+	public void copyPasteNonFormattedText(String sikuli) throws FindFailed, InterruptedException, AWTException{		
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
 		ArticleHelper.openArticle(ArticleHelper.formattedTextAndImageArticle);
 		CopyPasteHelper.copyPasteNonFormattedText(TextHelper.formattedStringStart, TextHelper.formattedStringFinish, TextHelper.textRelocationFinish);				

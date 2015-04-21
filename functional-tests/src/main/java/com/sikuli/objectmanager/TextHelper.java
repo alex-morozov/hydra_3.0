@@ -10,6 +10,7 @@ public class TextHelper {
 	public static String changedLetterCheck = "/inputScreens/TextHelper/changedLetterCheck.PNG";
 	public static String relocationCheck = "/inputScreens/TextHelper/relocationCheck.PNG";
 	public static String formatPainterUse = "/inputScreens/TextHelper/formatPainterUse.PNG";
+	public static String undoAddingTextThroughContextMenuCheck = "/inputScreens/TextHelper/undoAddingTextThroughContextMenuCheck.PNG";
 	public static String formatPainterCheck = "/inputScreens/TextHelper/formatPainterCheck.PNG";
 	public static String dublicationCheck = "/inputScreens/TextHelper/dublicationCheck.PNG";
 	public static String changedTextCheck = "/inputScreens/TextHelper/changedTextCheck.PNG";

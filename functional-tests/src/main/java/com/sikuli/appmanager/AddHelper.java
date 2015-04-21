@@ -25,14 +25,14 @@ public class AddHelper {
 		screen.click(objectToolbar);		
 	}
 	
-	public static void addThroughContextMenu(String object) throws FindFailed, InterruptedException{
-		ArticleHelper.openContextMenu(ArticleHelper.emptyArticle);
+	public static void addThroughContextMenu(String object, String objectToAdd) throws FindFailed, InterruptedException{
+		ArticleHelper.openContextMenu(object);
 		
 		Pattern addObjectButton = new Pattern (AddHelper.addContextMenu);
 		screen.wait(addObjectButton);
 		screen.click(addObjectButton);
 		
-		Pattern addSpecificObject = new Pattern (object);
+		Pattern addSpecificObject = new Pattern (objectToAdd);
 		screen.wait(addSpecificObject);
 		screen.click(addSpecificObject);		
 	}
