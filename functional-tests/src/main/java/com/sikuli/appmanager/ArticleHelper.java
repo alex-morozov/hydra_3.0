@@ -10,6 +10,7 @@ private ArticleHelper articleHelper;
 
 public static String editImageArticle = "/inputScreens/ArticleHelper/editImageArticle.PNG";
 public static String imageAreaArticle = "/inputScreens/ArticleHelper/imageAreaArticle.PNG";
+public static String formattedTextAndImageArticle = "/inputScreens/ArticleHelper/formattedTextAndImageArticle.PNG";
 public static String emptyArticle = "/inputScreens/ArticleHelper/emptyArticle.PNG";
 public static String textAndImageArticle = "/inputScreens/ArticleHelper/textAndImageArticle.PNG";
 public static String textArticle = "/inputScreens/ArticleHelper/textArticle.PNG";

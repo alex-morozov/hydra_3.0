@@ -9,11 +9,15 @@ import org.sikuli.script.FindFailed;
 public class TextHelper {
 	public static String changedLetterCheck = "/inputScreens/TextHelper/changedLetterCheck.PNG";
 	public static String relocationCheck = "/inputScreens/TextHelper/relocationCheck.PNG";
+	public static String formatPainterUse = "/inputScreens/TextHelper/formatPainterUse.PNG";
+	public static String formatPainterCheck = "/inputScreens/TextHelper/formatPainterCheck.PNG";
 	public static String dublicationCheck = "/inputScreens/TextHelper/dublicationCheck.PNG";
 	public static String changedTextCheck = "/inputScreens/TextHelper/changedTextCheck.PNG";
 	public static String highlightedString = "/inputScreens/TextHelper/highlightedString.PNG";
 	public static String stringFinish = "/inputScreens/TextHelper/stringFinish.PNG";
 	public static String stringStart = "/inputScreens/TextHelper/stringStart.PNG";
+	public static String formattedStringStart = "/inputScreens/TextHelper/formattedStringStart.PNG";
+	public static String formattedStringFinish = "/inputScreens/TextHelper/formattedStringFinish.PNG";
 	public static String textRelocationFinish = "/inputScreens/TextHelper/textRelocationFinish.PNG";
 	public static String textCheck = "/inputScreens/TextHelper/textCheck.PNG";
 	public static String absoluteFontSizeBasic = "/inputScreens/TextHelper/TextStyle/absoluteFontSizeBasic.PNG";
@@ -106,17 +110,26 @@ public class TextHelper {
 
 	public static void createStyleName() throws FindFailed {
 		ObjectHelper.typeFieldValue(emptyStyleName,"New Style");
-	}
+	}	
 	
-	public static void highlightOneWordToRight(String object) throws FindFailed, AWTException {
+	
+	public static void useFormatPainter(String borrowFormat, String applyFormat) throws FindFailed, AWTException {
 		Robot robot = new Robot();
-		ObjectHelper.clickButton(object);
+		ObjectHelper.clickButton(borrowFormat);
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_SHIFT);
-		robot.keyPress(KeyEvent.VK_RIGHT);
+		robot.keyPress(KeyEvent.VK_C);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		robot.keyRelease(KeyEvent.VK_SHIFT);
-		robot.keyRelease(KeyEvent.VK_RIGHT);
+		robot.keyRelease(KeyEvent.VK_C);
+		
+		ObjectHelper.clickButton(applyFormat);
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_SHIFT);
+		robot.keyPress(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyRelease(KeyEvent.VK_SHIFT);
+		robot.keyRelease(KeyEvent.VK_V);
 	}
 	
 	

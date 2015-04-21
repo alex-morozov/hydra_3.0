@@ -27,4 +27,12 @@ public class EditText extends TestBase {
 		ObjectHelper.finalCheck(TextHelper.changedLetterCheck);
 	}	
 
+	@Parameters({ "sikuli" })	
+	@Test
+		public void formatPainter(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		BookHelper.openBook(BookManager.image, BookManager.openBook);
+		ArticleHelper.openArticle(ArticleHelper.formattedTextAndImageArticle);			
+		TextHelper.useFormatPainter(TextHelper.formattedStringFinish, TextHelper.formatPainterUse);
+		ObjectHelper.finalCheck(TextHelper.formatPainterCheck);
+	}	
 }
