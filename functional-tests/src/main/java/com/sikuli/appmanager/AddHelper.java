@@ -11,6 +11,7 @@ public class AddHelper {
 	static Screen screen = new Screen();
 	
 	public static String addContextMenu = "/inputScreens/AddHelper/addContextMenu.PNG";
+	public static String addAudio = "/inputScreens/AddHelper/addAudio.PNG";
 	public static String addImage = "/inputScreens/AddHelper/addImage.PNG";
 	public static String addText = "/inputScreens/AddHelper/addText.PNG";
 	public static String addStyleName = "/inputScreens/AddHelper/addStyleName.PNG";
