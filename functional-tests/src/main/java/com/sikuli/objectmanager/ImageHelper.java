@@ -1,11 +1,7 @@
 package com.sikuli.objectmanager;
 
 import java.awt.AWTException;
-
 import org.sikuli.script.FindFailed;
-import org.sikuli.script.Pattern;
-import org.sikuli.script.Region;
-
 import com.sikuli.appmanager.AddHelper;
 import com.sikuli.appmanager.ArticleHelper;
 import com.sikuli.appmanager.BookHelper;

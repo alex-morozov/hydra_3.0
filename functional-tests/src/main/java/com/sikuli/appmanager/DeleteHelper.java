@@ -6,7 +6,6 @@ import java.io.File;
 import org.sikuli.script.Button;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Screen;
-import org.testng.Assert;
 import com.sikuli.objectmanager.ObjectHelper;
 
 public class DeleteHelper {
@@ -21,8 +20,7 @@ public class DeleteHelper {
 		screen.mouseMove(object);
 		screen.mouseDown(Button.RIGHT);
 		screen.mouseUp(Button.RIGHT);
-		ObjectHelper.clickButton(DeleteHelper.deleteObjectButton);		
-		object.isEmpty();
+		ObjectHelper.clickButton(DeleteHelper.deleteObjectButton);			
 	}
 	
 	/*

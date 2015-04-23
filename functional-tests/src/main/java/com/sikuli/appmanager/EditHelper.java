@@ -5,8 +5,6 @@ import java.awt.AWTException;
 import org.sikuli.script.Button;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Screen;
-
-import com.sikuli.objectmanager.ImageHelper;
 import com.sikuli.objectmanager.ObjectHelper;
 
 public class EditHelper {

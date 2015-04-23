@@ -7,3 +7,6 @@
 1429619598698	Rename method 'addThroughToolbar'
 1429619606193	Rename method 'addThroughContextMenu'
 1429710279485	Delete element
+1429714149505	Rename type 'DeleteImage'
+1429782297772	Rename resource 'relocationCheck.PNG'
+1429784904396	Rename type 'UndoImageActions'

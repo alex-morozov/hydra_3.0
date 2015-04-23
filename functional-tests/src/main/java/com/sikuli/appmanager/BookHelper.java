@@ -1,10 +1,7 @@
 package com.sikuli.appmanager;
 
 import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
 import org.sikuli.script.FindFailed;
-import org.sikuli.script.Pattern;
 import org.sikuli.script.Screen;
 
 import com.sikuli.objectmanager.ObjectHelper;

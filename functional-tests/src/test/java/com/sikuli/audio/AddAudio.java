@@ -10,10 +10,8 @@ import com.sikuli.appmanager.AddHelper;
 import com.sikuli.appmanager.ArticleHelper;
 import com.sikuli.appmanager.BookHelper;
 import com.sikuli.appmanager.BookManager;
-import com.sikuli.appmanager.EditHelper;
 import com.sikuli.common.TestBase;
 import com.sikuli.objectmanager.AudioHelper;
-import com.sikuli.objectmanager.ImageHelper;
 import com.sikuli.objectmanager.ObjectHelper;
 
 public class AddAudio extends TestBase{
