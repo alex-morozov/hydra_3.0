@@ -9,6 +9,8 @@
 	    <packages>
 	        <package name = "com.sikuli.image"></package>
 	        <package name = "com.sikuli.text"></package>
+	        <package name = "com.sikuli.audio"></package>
+	        <package name = "com.sikuli.popup.article"></package>
 	    </packages>
 	    	   	          
 		

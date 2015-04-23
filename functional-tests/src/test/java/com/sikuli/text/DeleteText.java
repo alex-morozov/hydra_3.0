@@ -20,6 +20,6 @@ public class DeleteText extends TestBase{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
 		ArticleHelper.openArticle(ArticleHelper.textArticle);
 		ObjectHelper.highlightAndDeleteAllContent(TextHelper.textCheck);			
-		TextHelper.textCheck.isEmpty();
+		ObjectHelper.finalCheck(ArticleHelper.emptyArticle);
 	}
 }
