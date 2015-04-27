@@ -18,6 +18,7 @@ public class PopUpObjectsHelper {
 	public static String popUpArticleText = "/inputScreens/PopUpObjectsHelper/popUpArticleText.PNG";
 	public static String idPopUpArticle = "/inputScreens/PopUpObjectsHelper/idPopUpArticle.PNG";
 	public static String editPopUpArticleWindowTitle = "/inputScreens/PopUpObjectsHelper/editPopUpArticleWindowTitle.PNG";
+	public static String dublicationCheck = "/inputScreens/PopUpObjectsHelper/dublicationCheck.PNG";
 	
 	public static void addPopUpArticle(String stringStart, String stringFinish, String object) throws FindFailed, InterruptedException {
 		screen.dragDrop(stringStart, stringFinish);
