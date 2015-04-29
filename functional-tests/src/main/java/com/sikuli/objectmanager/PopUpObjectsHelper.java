@@ -19,6 +19,9 @@ public class PopUpObjectsHelper {
 	public static String idPopUpArticle = "/inputScreens/PopUpObjectsHelper/idPopUpArticle.PNG";
 	public static String editPopUpArticleWindowTitle = "/inputScreens/PopUpObjectsHelper/editPopUpArticleWindowTitle.PNG";
 	public static String dublicationCheck = "/inputScreens/PopUpObjectsHelper/dublicationCheck.PNG";
+	public static String relocationCheck = "/inputScreens/PopUpObjectsHelper/relocationCheck.PNG";
+	public static String undoAddingArticleCheck = "/inputScreens/PopUpObjectsHelper/undoAddingArticleCheck.PNG";
+	public static String undoPopUpArticleRelocationCheck = "/inputScreens/PopUpObjectsHelper/undoPopUpArticleRelocationCheck.PNG";
 	
 	public static void addPopUpArticle(String stringStart, String stringFinish, String object) throws FindFailed, InterruptedException {
 		screen.dragDrop(stringStart, stringFinish);
@@ -29,6 +32,12 @@ public class PopUpObjectsHelper {
 	public static void editPopUpArticle() throws FindFailed, InterruptedException, AWTException {
 		screen.mouseMove(popUpArticleText);
 		EditHelper.editObject(idPopUpArticle, editPopUpArticleWindowTitle);							
+	}
+
+	public static void addPopUpImage(String stringStart2, String stringFinish2,
+			String highlightedText2) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

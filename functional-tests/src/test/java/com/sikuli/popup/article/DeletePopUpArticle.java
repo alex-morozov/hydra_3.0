@@ -16,7 +16,7 @@ import com.sikuli.objectmanager.PopUpObjectsHelper;
 public class DeletePopUpArticle extends TestBase {
 	@Parameters({ "sikuli" })
 	@Test
-	public void DeletePopUpArticleThroughContextMenu (String sikuli) throws FindFailed, InterruptedException, AWTException{
+	public void deletePopUpArticleThroughContextMenu (String sikuli) throws FindFailed, InterruptedException, AWTException{
 		DeleteHelper.deleteThroughContextMenu(ArticleHelper.textAndPopUpArticle,PopUpObjectsHelper.popUpArticleText);
 		ObjectHelper.finalCheck(AudioHelper.audioDeletionCheck);
 	}
