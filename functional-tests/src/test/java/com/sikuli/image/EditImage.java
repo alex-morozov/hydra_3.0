@@ -18,8 +18,7 @@ public class EditImage extends TestBase{
 	@Test
 	public void changeImageSizeProportionally(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		EditHelper.openBookAndEditObject(ArticleHelper.editImageArticle,ImageHelper.image, ImageHelper.editWindowTabSize);
-		ObjectHelper.changeFieldValue(ImageHelper.imageWidth, "700");	
-		ObjectHelper.clickButton(ImageHelper.imageHeight);		
+		ImageHelper.changeImageSizeProportionally();		
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		EditHelper.cancelObjectHighlighting();
 		EditHelper.editObject(ImageHelper.imageWithChangedSize, ImageHelper.editWindowTabChangedSize);						
@@ -29,9 +28,7 @@ public class EditImage extends TestBase{
 	@Test
 	public void changeImageSize(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		EditHelper.openBookAndEditObject(ArticleHelper.editImageArticle,ImageHelper.image, ImageHelper.editWindowTabSize);
-		ObjectHelper.clickButton(ImageHelper.proportionalChangeButton);	
-		ObjectHelper.changeFieldValue(ImageHelper.imageWidth, "700");	
-		ObjectHelper.changeFieldValue(ImageHelper.imageHeight, "490");	
+		ImageHelper.changeImageSizeManually();		
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		EditHelper.cancelObjectHighlighting();
 		EditHelper.editObject(ImageHelper.imageWithChangedSize, ImageHelper.editWindowTabChangedSize);						

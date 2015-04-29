@@ -17,8 +17,7 @@ public class ObjectHelper {
 	public static Screen screen = new Screen();
 	
 	public static String ok = "/inputScreens/ObjectHelper/OK.PNG";
-	public static String cancel = "/inputScreens/ObjectHelper/cancel.PNG";
-	public static String styleItalic = "/inputScreens/ObjectHelper/styleItalic.PNG";
+	public static String cancel = "/inputScreens/ObjectHelper/cancel.PNG";	
 	public static String chooseData="/inputScreens/Common_folder/ChooseData.PNG";
 	
 	public static void clickButton(String button) throws FindFailed	{

@@ -1,0 +1,5 @@
+1430320973732	Extract method 'addImageFile'
+1430321893373	Extract method 'changeImageSizeManually'
+1430321932590	Move member 'changeImageSizeManually'
+1430322043722	Extract method 'changeImageSizeProportionally'
+1430322061962	Move member 'changeImageSizeProportionally'

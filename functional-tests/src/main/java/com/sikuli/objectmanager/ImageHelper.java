@@ -65,8 +65,13 @@ public static void addImageThroughToolbar() throws FindFailed, InterruptedExcept
 	BookHelper.openBook(BookManager.image, BookManager.openBook);
 	ArticleHelper.openArticle(ArticleHelper.addImageArticle);			
 	AddHelper.addThroughToolbar(ImageHelper.addImageToolbar);
+	addImageFile();			
+}
+
+
+public static void addImageFile() throws FindFailed, InterruptedException, AWTException {
 	ObjectHelper.clickButton(AddHelper.addFileButton);	
-	ObjectHelper.openFile(ImageHelper.imageFilePath, ImageHelper.imageFile);			
+	ObjectHelper.openFile(ImageHelper.imageFilePath, ImageHelper.imageFile);
 }
 
 public static void createHighlightedImageArea() throws FindFailed, InterruptedException, AWTException{
@@ -93,6 +98,21 @@ public static void editImageAreaCoordinates() throws FindFailed, InterruptedExce
 
 public ImageHelper getImageHelper(){
 	return imageHelper;
+}
+
+
+public static void changeImageSizeProportionally() throws FindFailed, AWTException {
+	ObjectHelper.clickButton(tabSize);
+	ObjectHelper.clickButton(proportionalChangeButton);		
+	ObjectHelper.changeFieldValue(imageWidth, "700");	
+	ObjectHelper.clickButton(imageHeight);
+}
+
+
+public static void changeImageSizeManually() throws FindFailed, AWTException {
+	ObjectHelper.clickButton(ImageHelper.tabSize);		
+	ObjectHelper.changeFieldValue(imageWidth, "700");			
+	ObjectHelper.changeFieldValue(imageHeight, "490");
 }
 
 }

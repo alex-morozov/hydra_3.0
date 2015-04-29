@@ -9,7 +9,9 @@ import org.testng.annotations.Test;
 import com.sikuli.appmanager.ArticleHelper;
 import com.sikuli.appmanager.BookHelper;
 import com.sikuli.appmanager.BookManager;
+import com.sikuli.appmanager.EditHelper;
 import com.sikuli.common.TestBase;
+import com.sikuli.objectmanager.ImageHelper;
 import com.sikuli.objectmanager.ObjectHelper;
 import com.sikuli.objectmanager.PopUpObjectsHelper;
 
@@ -22,7 +24,7 @@ public class AddPopUpImage extends TestBase{
 		PopUpObjectsHelper.addPopUpImage(PopUpObjectsHelper.stringStart, PopUpObjectsHelper.stringFinish, PopUpObjectsHelper.highlightedText);
 		ObjectHelper.clickButton(ObjectHelper.ok);
 		screen.mouseMove(PopUpObjectsHelper.highlightedText);
-		ObjectHelper.finalCheck(PopUpObjectsHelper.idPopUpArticle);
+		ObjectHelper.finalCheck(PopUpObjectsHelper.idPopUpImage);
 	}
 	
 	@Parameters({ "sikuli" })	
@@ -30,10 +32,39 @@ public class AddPopUpImage extends TestBase{
 		public void cancelAddingPopUpArticle(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
 		ArticleHelper.openArticle(ArticleHelper.addPopUpObjectArticle);
-		PopUpObjectsHelper.addPopUpArticle(PopUpObjectsHelper.stringStart, PopUpObjectsHelper.stringFinish, PopUpObjectsHelper.highlightedText);	
+		PopUpObjectsHelper.addPopUpImage(PopUpObjectsHelper.stringStart, PopUpObjectsHelper.stringFinish, PopUpObjectsHelper.highlightedText);
 		ObjectHelper.clickButton(ObjectHelper.cancel);
 		ObjectHelper.finalCheck(PopUpObjectsHelper.highlightedText);
-		ObjectHelper.finalCheck(PopUpObjectsHelper.idPopUpArticle);
+		ObjectHelper.finalCheck(PopUpObjectsHelper.undoAddingArticleCheck);
 	}
+	
+	@Parameters({ "sikuli" })
+	@Test
+	public void changeImageSizeProportionally(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		BookHelper.openBook(BookManager.image, BookManager.openBook);
+		ArticleHelper.openArticle(ArticleHelper.addPopUpObjectArticle);
+		PopUpObjectsHelper.addPopUpImage(PopUpObjectsHelper.stringStart, PopUpObjectsHelper.stringFinish, PopUpObjectsHelper.highlightedText);
+		ImageHelper.changeImageSizeProportionally();			
+		ObjectHelper.clickButton(ObjectHelper.ok);
+		PopUpObjectsHelper.editPopUpImage();
+		ObjectHelper.clickButton(ImageHelper.tabSize);
+		ObjectHelper.finalCheck(ImageHelper.editWindowTabChangedSize);
+	}
+	
+	@Parameters({ "sikuli" })
+	@Test
+	public void changeImageSize(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		BookHelper.openBook(BookManager.image, BookManager.openBook);
+		ArticleHelper.openArticle(ArticleHelper.addPopUpObjectArticle);
+		PopUpObjectsHelper.addPopUpImage(PopUpObjectsHelper.stringStart, PopUpObjectsHelper.stringFinish, PopUpObjectsHelper.highlightedText);
+		ImageHelper.changeImageSizeManually();			
+		ObjectHelper.clickButton(ObjectHelper.ok);
+		PopUpObjectsHelper.editPopUpImage();
+		ObjectHelper.clickButton(ImageHelper.tabSize);
+		ObjectHelper.finalCheck(ImageHelper.editWindowTabChangedSize);
+	}
+
+	
+	
 
 }

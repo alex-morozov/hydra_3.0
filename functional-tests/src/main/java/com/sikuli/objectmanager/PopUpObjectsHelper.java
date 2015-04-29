@@ -17,7 +17,9 @@ public class PopUpObjectsHelper {
 	public static String stringStart = "/inputScreens/PopUpObjectsHelper/stringStart.PNG";
 	public static String popUpArticleText = "/inputScreens/PopUpObjectsHelper/popUpArticleText.PNG";
 	public static String idPopUpArticle = "/inputScreens/PopUpObjectsHelper/idPopUpArticle.PNG";
+	public static String idPopUpImage = "/inputScreens/PopUpObjectsHelper/idPopUpImage.PNG";
 	public static String editPopUpArticleWindowTitle = "/inputScreens/PopUpObjectsHelper/editPopUpArticleWindowTitle.PNG";
+	public static String editPopUpImageWindowTitle = "/inputScreens/PopUpObjectsHelper/editPopUpImageWindowTitle.PNG";
 	public static String dublicationCheck = "/inputScreens/PopUpObjectsHelper/dublicationCheck.PNG";
 	public static String relocationCheck = "/inputScreens/PopUpObjectsHelper/relocationCheck.PNG";
 	public static String undoAddingArticleCheck = "/inputScreens/PopUpObjectsHelper/undoAddingArticleCheck.PNG";
@@ -33,11 +35,16 @@ public class PopUpObjectsHelper {
 		screen.mouseMove(popUpArticleText);
 		EditHelper.editObject(idPopUpArticle, editPopUpArticleWindowTitle);							
 	}
+	
+	public static void editPopUpImage() throws FindFailed, InterruptedException, AWTException {
+		screen.mouseMove(popUpArticleText);
+		EditHelper.editObject(idPopUpImage, editPopUpImageWindowTitle);							
+	}
 
-	public static void addPopUpImage(String stringStart2, String stringFinish2,
-			String highlightedText2) {
-		// TODO Auto-generated method stub
-		
+	public static void addPopUpImage(String stringStart2, String stringFinish2,	String object) throws FindFailed, InterruptedException, AWTException {
+		screen.dragDrop(stringStart, stringFinish);
+		AddHelper.addThroughContextMenu(object, AddHelper.addPopUpImage);
+		ImageHelper.addImageFile();		
 	}
 
 }

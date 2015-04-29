@@ -33,6 +33,6 @@ public class AddPopUpArticle extends TestBase{
 		PopUpObjectsHelper.addPopUpArticle(PopUpObjectsHelper.stringStart, PopUpObjectsHelper.stringFinish, PopUpObjectsHelper.highlightedText);	
 		ObjectHelper.clickButton(ObjectHelper.cancel);
 		ObjectHelper.finalCheck(PopUpObjectsHelper.highlightedText);
-		ObjectHelper.finalCheck(PopUpObjectsHelper.idPopUpArticle);
+		ObjectHelper.finalCheck(PopUpObjectsHelper.undoAddingArticleCheck);
 	}
 }

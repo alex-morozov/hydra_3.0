@@ -32,8 +32,7 @@ public class AddImage extends TestBase{
 		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
 		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
 		AddHelper.addThroughContextMenu(ArticleHelper.emptyArticle, AddHelper.addImage);
-		ObjectHelper.clickButton(AddHelper.addFileButton);	
-		ObjectHelper.openFile(ImageHelper.imageFilePath, ImageHelper.imageFile);
+		ImageHelper.addImageFile();
 		ObjectHelper.clickButton(ObjectHelper.ok);		
 		EditHelper.editObject(ImageHelper.image, ImageHelper.editWindowTabSize);			
 	}
@@ -41,27 +40,24 @@ public class AddImage extends TestBase{
 	@Parameters({ "sikuli" })
 	@Test
 	public void changeImageSize(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		ImageHelper.addImageThroughToolbar();
-		ObjectHelper.clickButton(ImageHelper.tabSize);		
-		ObjectHelper.changeFieldValue(ImageHelper.imageWidth, "700");			
-		ObjectHelper.changeFieldValue(ImageHelper.imageHeight, "490");	
+		ImageHelper.addImageThroughToolbar();		
+		ImageHelper.changeImageSizeManually();	
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		EditHelper.editObject(ImageHelper.imageWithChangedSize, ImageHelper.editWindowTabChangedSize);	
 		ObjectHelper.finalCheck(ImageHelper.editWindowTabChangedSize);
 	}
+
 	
 	@Parameters({ "sikuli" })
 	@Test
 	public void changeImageSizeProportionally(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		ImageHelper.addImageThroughToolbar();
-		ObjectHelper.clickButton(ImageHelper.tabSize);
-		ObjectHelper.clickButton(ImageHelper.proportionalChangeButton);		
-		ObjectHelper.changeFieldValue(ImageHelper.imageWidth, "700");	
-		ObjectHelper.clickButton(ImageHelper.imageHeight);			
+		ImageHelper.changeImageSizeProportionally();			
 		ObjectHelper.clickButton(ObjectHelper.ok);
 		EditHelper.editObject(ImageHelper.imageWithChangedSize, ImageHelper.editWindowTabChangedSize);	
 		ObjectHelper.finalCheck(ImageHelper.editWindowTabChangedSize);
 	}
+
 	
 	@Parameters({ "sikuli" })
 	@Test
