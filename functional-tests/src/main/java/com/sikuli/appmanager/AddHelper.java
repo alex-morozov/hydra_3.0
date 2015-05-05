@@ -19,6 +19,7 @@ public class AddHelper {
 	public static String addStyleName = "/inputScreens/AddHelper/addStyleName.PNG";
 	public static String addSubObjectPlusButton = "/inputScreens/AddHelper/addSubObjectPlusButton.PNG";
 	public static String addFileButton = "/inputScreens/AddHelper/addFileButton.PNG";
+	public static String changedAddFileButton = "/inputScreens/AddHelper/changedAddFileButton.PNG";
 	public static String addSubObjectRectangleButton = "/inputScreens/AddHelper/addSubObjectRectangleButton.PNG";
 		
 	public static void addThroughToolbar(String object) throws FindFailed, InterruptedException{

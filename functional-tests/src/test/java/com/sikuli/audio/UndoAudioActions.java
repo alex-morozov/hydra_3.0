@@ -31,7 +31,7 @@ public class UndoAudioActions  extends TestBase{
 	@Test
 	public void undoDeleteAudio (String sikuli) throws FindFailed, InterruptedException, AWTException{
 		DeleteHelper.deleteThroughContextMenu(ArticleHelper.textAndAudioArticle,AudioHelper.audio);
-		ObjectHelper.finalCheck(AudioHelper.audioDeletionCheck);
+		ObjectHelper.finalCheck(ObjectHelper.deletionCheck);
 		UndoRedoHelper.undoAction();
 		ObjectHelper.finalCheck(AudioHelper.audio);
 	}

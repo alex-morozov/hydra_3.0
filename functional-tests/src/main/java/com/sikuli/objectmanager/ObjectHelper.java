@@ -12,13 +12,14 @@ import com.sikuli.appmanager.ArticleHelper;
 
 
 public class ObjectHelper {
-	private ObjectHelper objectHelper;
+	private ObjectHelper objectHelper;	
 	
 	public static Screen screen = new Screen();
 	
 	public static String ok = "/inputScreens/ObjectHelper/OK.PNG";
 	public static String cancel = "/inputScreens/ObjectHelper/cancel.PNG";	
 	public static String chooseData="/inputScreens/Common_folder/ChooseData.PNG";
+	public static String deletionCheck = "/inputScreens/ObjectHelper/deletionCheck.PNG";
 	
 	public static void clickButton(String button) throws FindFailed	{
 	screen.wait(button);
@@ -105,6 +106,16 @@ public class ObjectHelper {
 		screen.mouseMove(object);
 		screen.mouseDown(Button.RIGHT);
 		screen.mouseUp(Button.RIGHT);
+	}
+	
+	public static void clickComplexObject(String object) throws AWTException, FindFailed{
+		Robot robot = new Robot();		
+		findObject(object);
+		screen.mouseMove(object);
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		screen.mouseDown(Button.LEFT);
+		screen.mouseUp(Button.LEFT);
+		robot.keyRelease(KeyEvent.VK_CONTROL);		
 	}
 
 }

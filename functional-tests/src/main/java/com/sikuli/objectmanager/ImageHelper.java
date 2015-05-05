@@ -53,10 +53,12 @@ public static String editImageAreaSizeSecondValue = "/inputScreens/ImageHelper/e
 public static String imageAreaEmptyListElement = "/inputScreens/ImageHelper/imageAreaEmptyListElement.PNG";
 public static String idImage = "/inputScreens/ImageHelper/idImage.PNG";
 public static String textString = "/inputScreens/ImageHelper/textString.PNG";
+public static String firefoxImage = "/inputScreens/ImageHelper/firefoxImage.PNG";
 public static String relocationCheck = "/inputScreens/ImageHelper/relocationCheck.PNG";
 public static String copyPasteCheck = "/inputScreens/ImageHelper/copyPasteCheck.PNG";
 public static String dublicationCheck = "/inputScreens/ImageHelper/dublicationCheck.PNG";
 public static String undoRelocationCheck = "/inputScreens/ImageHelper/undoRelocationCheck.PNG";
+public static String changeImageFile = "/inputScreens/ImageHelper/changeImageFile.PNG";
 
 public static String imageFilePath = "C:/Users/alexey_morozov/Documents/AutotestsHydra/Image/source";
 
@@ -68,10 +70,14 @@ public static void addImageThroughToolbar() throws FindFailed, InterruptedExcept
 	addImageFile();			
 }
 
-
 public static void addImageFile() throws FindFailed, InterruptedException, AWTException {
 	ObjectHelper.clickButton(AddHelper.addFileButton);	
 	ObjectHelper.openFile(ImageHelper.imageFilePath, ImageHelper.imageFile);
+}
+
+public static void changeImageFile(String button) throws FindFailed, InterruptedException, AWTException {
+	ObjectHelper.clickButton(button);	
+	ObjectHelper.openFile(ImageHelper.imageFilePath, ImageHelper.changeImageFile);
 }
 
 public static void createHighlightedImageArea() throws FindFailed, InterruptedException, AWTException{

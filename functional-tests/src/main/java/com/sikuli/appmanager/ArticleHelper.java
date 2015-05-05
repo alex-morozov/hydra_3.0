@@ -15,6 +15,7 @@ public static String emptyArticle = "/inputScreens/ArticleHelper/emptyArticle.PN
 public static String textAndImageArticle = "/inputScreens/ArticleHelper/textAndImageArticle.PNG";
 public static String textAndAudioArticle = "/inputScreens/ArticleHelper/textAndAudioArticle.PNG";
 public static String textAndPopUpArticle = "/inputScreens/ArticleHelper/textAndPopUpArticle.PNG";
+public static String textAndPopUpImageArticle = "/inputScreens/ArticleHelper/textAndPopUpImageArticle.PNG";
 public static String textArticle = "/inputScreens/ArticleHelper/textArticle.PNG";
 public static String addImageArticle = "/inputScreens/ArticleHelper/addImageArticle.PNG";
 public static String addPopUpObjectArticle = "/inputScreens/ArticleHelper/addPopUpObjectArticle.PNG";

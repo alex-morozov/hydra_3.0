@@ -19,8 +19,6 @@ public class AudioHelper {
 	public static String undoRelocationCheck = "/inputScreens/AudioHelper/undoRelocationCheck.PNG";
 	public static String idAudio = "/inputScreens/AudioHelper/idAudio.PNG";
 	public static String audioAndText = "/inputScreens/AudioHelper/audioAndText.PNG";
-	public static String audioDeletionCheck = "/inputScreens/AudioHelper/audioDeletionCheck.PNG";
-	
 	public static String audioFilePath = "C:/Users/alexey_morozov/Documents/AutotestsHydra/Image/source";
 	
 	public static void addAudioThroughToolbar() throws FindFailed, InterruptedException, AWTException{

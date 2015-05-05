@@ -33,7 +33,7 @@ public class RedoAudioActions extends TestBase{
 	public void DeleteAudioThroughContextMenu (String sikuli) throws FindFailed, InterruptedException, AWTException{
 		DeleteHelper.deleteThroughContextMenu(ArticleHelper.textAndAudioArticle,AudioHelper.audio);
 		UndoRedoHelper.undoRedoAction();
-		ObjectHelper.finalCheck(AudioHelper.audioDeletionCheck);
+		ObjectHelper.finalCheck(ObjectHelper.deletionCheck);
 	}
 	
 	@Parameters({ "sikuli" })

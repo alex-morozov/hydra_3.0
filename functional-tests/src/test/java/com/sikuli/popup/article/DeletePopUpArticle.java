@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 import com.sikuli.appmanager.ArticleHelper;
 import com.sikuli.appmanager.DeleteHelper;
 import com.sikuli.common.TestBase;
-import com.sikuli.objectmanager.AudioHelper;
 import com.sikuli.objectmanager.ObjectHelper;
 import com.sikuli.objectmanager.PopUpObjectsHelper;
 
@@ -18,6 +17,6 @@ public class DeletePopUpArticle extends TestBase {
 	@Test
 	public void deletePopUpArticleThroughContextMenu (String sikuli) throws FindFailed, InterruptedException, AWTException{
 		DeleteHelper.deleteThroughContextMenu(ArticleHelper.textAndPopUpArticle,PopUpObjectsHelper.popUpArticleText);
-		ObjectHelper.finalCheck(AudioHelper.audioDeletionCheck);
+		ObjectHelper.finalCheck(ObjectHelper.deletionCheck);
 	}
 }

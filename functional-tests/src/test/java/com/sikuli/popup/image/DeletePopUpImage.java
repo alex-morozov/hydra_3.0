@@ -1,4 +1,4 @@
-package com.sikuli.audio;
+package com.sikuli.popup.image;
 
 import java.awt.AWTException;
 
@@ -9,14 +9,15 @@ import org.testng.annotations.Test;
 import com.sikuli.appmanager.ArticleHelper;
 import com.sikuli.appmanager.DeleteHelper;
 import com.sikuli.common.TestBase;
-import com.sikuli.objectmanager.AudioHelper;
 import com.sikuli.objectmanager.ObjectHelper;
+import com.sikuli.objectmanager.PopUpObjectsHelper;
 
-public class DeleteAudio extends TestBase {
+public class DeletePopUpImage extends TestBase {
 	@Parameters({ "sikuli" })
 	@Test
-	public void DeleteAudioThroughContextMenu (String sikuli) throws FindFailed, InterruptedException, AWTException{
-		DeleteHelper.deleteThroughContextMenu(ArticleHelper.textAndAudioArticle,AudioHelper.audio);
+	public void deletePopUpImageThroughContextMenu (String sikuli) throws FindFailed, InterruptedException, AWTException{
+		DeleteHelper.deleteThroughContextMenu(ArticleHelper.textAndPopUpImageArticle,PopUpObjectsHelper.popUpArticleText);
 		ObjectHelper.finalCheck(ObjectHelper.deletionCheck);
 	}
+
 }
