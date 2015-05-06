@@ -2,3 +2,12 @@
 1430828854851	Move member 'deletionCheck'
 1430828883773	Rename resource 'audioDeletionCheck.PNG'
 1430828893900	Move file
+1430833978397	Rename field 'undoAddingArticleCheck'
+1430834002558	Rename resource 'undoAddingArticleCheck.PNG'
+1430903787253	Rename field 'popUpArticleText'
+1430903801167	Rename resource 'popUpArticleText.PNG'
+1430905929950	Rename type 'Deletelink'
+1430907298772	Rename field 'undoPopUpArticleRelocationCheck'
+1430907306159	Rename resource 'undoPopUpArticleRelocationCheck.PNG'
+1430909978962	Rename package 'com.sikuli.url'
+1430911265921	Rename resource 'idURL.PNG'

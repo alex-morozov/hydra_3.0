@@ -35,7 +35,7 @@ public class AddPopUpImage extends TestBase{
 		PopUpObjectsHelper.addPopUpImage(PopUpObjectsHelper.stringStart, PopUpObjectsHelper.stringFinish, PopUpObjectsHelper.highlightedText);
 		ObjectHelper.clickButton(ObjectHelper.cancel);
 		ObjectHelper.finalCheck(PopUpObjectsHelper.highlightedText);
-		ObjectHelper.finalCheck(PopUpObjectsHelper.undoAddingArticleCheck);
+		ObjectHelper.finalCheck(PopUpObjectsHelper.undoAddingObjectCheck);
 	}
 	
 	@Parameters({ "sikuli" })

@@ -1,9 +1,11 @@
-package com.sikuli.popup.article;
+package com.sikuli.link;
 
 import java.awt.AWTException;
+
 import org.sikuli.script.FindFailed;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
 import com.sikuli.appmanager.ArticleHelper;
 import com.sikuli.appmanager.BookHelper;
 import com.sikuli.appmanager.BookManager;
@@ -16,54 +18,53 @@ import com.sikuli.objectmanager.AudioHelper;
 import com.sikuli.objectmanager.ObjectHelper;
 import com.sikuli.objectmanager.PopUpObjectsHelper;
 
-public class UndoPopUpArticleActions extends TestBase{
+public class UndoLinkActions extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
-		public void undoAddingPopUpArticle(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void undoAddingLink(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
 		ArticleHelper.openArticle(ArticleHelper.addPopUpObjectArticle);
-		PopUpObjectsHelper.addPopUpArticle(PopUpObjectsHelper.stringStart, PopUpObjectsHelper.stringFinish, PopUpObjectsHelper.highlightedText);
-		ObjectHelper.clickButton(ObjectHelper.ok);		
-		screen.mouseMove(PopUpObjectsHelper.highlightedText);
+		PopUpObjectsHelper.addLink(PopUpObjectsHelper.stringStart, PopUpObjectsHelper.stringFinish, PopUpObjectsHelper.highlightedText);
+		ObjectHelper.clickButton(ObjectHelper.ok);
 		UndoRedoHelper.undoAction();
 		ObjectHelper.finalCheck(PopUpObjectsHelper.undoAddingObjectCheck);
 	}
 	
 	@Parameters({ "sikuli" })
 	@Test
-	public void undoDeletePopUpArticleThroughContextMenu (String sikuli) throws FindFailed, InterruptedException, AWTException{
-		DeleteHelper.deleteThroughContextMenu(ArticleHelper.textAndPopUpArticle,PopUpObjectsHelper.popUpObjectText);
+	public void undoDeleteLinkThroughContextMenu (String sikuli) throws FindFailed, InterruptedException, AWTException{
+		DeleteHelper.deleteThroughContextMenu(ArticleHelper.textAndLinkArticle,PopUpObjectsHelper.popUpObjectText);
 		UndoRedoHelper.undoAction();
 		screen.mouseMove(PopUpObjectsHelper.highlightedText);
-		ObjectHelper.finalCheck(PopUpObjectsHelper.idPopUpArticle);
+		ObjectHelper.finalCheck(PopUpObjectsHelper.idLink);
 	}
 	
 	@Parameters({ "sikuli" })
 	@Test
-	public void undoDublicationPopUpArticle(String sikuli) throws FindFailed, InterruptedException, AWTException{		
+	public void undoDublicationLink(String sikuli) throws FindFailed, InterruptedException, AWTException{		
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndPopUpArticle);
-		DublicateHelper.dublicateObject(PopUpObjectsHelper.highlightedText, PopUpObjectsHelper.idPopUpArticle, AudioHelper.textString);
+		ArticleHelper.openArticle(ArticleHelper.textAndLinkArticle);
+		DublicateHelper.dublicateObject(PopUpObjectsHelper.highlightedText, PopUpObjectsHelper.idLink, AudioHelper.textString);
 		UndoRedoHelper.undoAction();
 		ObjectHelper.finalCheck(AudioHelper.textString);			
 	}
 	
 	@Parameters({ "sikuli" })
 	@Test
-	public void undoRelocationPopUpArticle(String sikuli) throws FindFailed, InterruptedException, AWTException{		
+	public void undoRelocationLink(String sikuli) throws FindFailed, InterruptedException, AWTException{		
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndPopUpArticle);
-		RelocateHelper.relocateObject(PopUpObjectsHelper.highlightedText, PopUpObjectsHelper.idPopUpArticle, AudioHelper.textString);
+		ArticleHelper.openArticle(ArticleHelper.textAndLinkArticle);
+		RelocateHelper.relocateObject(PopUpObjectsHelper.highlightedText, PopUpObjectsHelper.idLink, AudioHelper.textString);
 		UndoRedoHelper.undoAction();
-		ObjectHelper.finalCheck(PopUpObjectsHelper.undoRelocationCheck);			
+		ObjectHelper.finalCheck(PopUpObjectsHelper.undoRelocationCheck);						
 	}
 	
 	@Parameters({ "sikuli" })	
 	@Test
-		public void undoEditPopUpArticle(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void undoEditLink(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndPopUpArticle);
-		PopUpObjectsHelper.editPopUpArticle();
+		ArticleHelper.openArticle(ArticleHelper.textAndLinkArticle);
+		PopUpObjectsHelper.editLink();
 		ObjectHelper.clickButton(ArticleHelper.linkArticle);		
 		ObjectHelper.clickButton(ObjectHelper.ok);
 		UndoRedoHelper.undoAction();

@@ -16,6 +16,8 @@ public class AddHelper {
 	public static String addPopUpArticle = "/inputScreens/AddHelper/addPopUpArticle.PNG";
 	public static String addPopUpImage = "/inputScreens/AddHelper/addPopUpImage.PNG";
 	public static String addText = "/inputScreens/AddHelper/addText.PNG";
+	public static String addLink = "/inputScreens/AddHelper/addLink.PNG";
+	public static String addExternalLink = "/inputScreens/AddHelper/addExternalLink.PNG";
 	public static String addStyleName = "/inputScreens/AddHelper/addStyleName.PNG";
 	public static String addSubObjectPlusButton = "/inputScreens/AddHelper/addSubObjectPlusButton.PNG";
 	public static String addFileButton = "/inputScreens/AddHelper/addFileButton.PNG";

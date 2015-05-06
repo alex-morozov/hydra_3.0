@@ -29,13 +29,13 @@ public class UndoPopUpImageActions extends TestBase{
 		ObjectHelper.clickButton(ObjectHelper.ok);		
 		screen.mouseMove(PopUpObjectsHelper.highlightedText);
 		UndoRedoHelper.undoAction();
-		ObjectHelper.finalCheck(PopUpObjectsHelper.undoAddingArticleCheck);
+		ObjectHelper.finalCheck(PopUpObjectsHelper.undoAddingObjectCheck);
 	}
 	
 	@Parameters({ "sikuli" })
 	@Test
 	public void undoDeletePopUpImageThroughContextMenu (String sikuli) throws FindFailed, InterruptedException, AWTException{
-		DeleteHelper.deleteThroughContextMenu(ArticleHelper.textAndPopUpImageArticle,PopUpObjectsHelper.popUpArticleText);
+		DeleteHelper.deleteThroughContextMenu(ArticleHelper.textAndPopUpImageArticle,PopUpObjectsHelper.popUpObjectText);
 		UndoRedoHelper.undoAction();
 		screen.mouseMove(PopUpObjectsHelper.highlightedText);
 		ObjectHelper.finalCheck(PopUpObjectsHelper.idPopUpImage);

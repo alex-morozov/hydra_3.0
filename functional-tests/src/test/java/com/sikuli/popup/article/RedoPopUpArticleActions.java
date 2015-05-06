@@ -34,7 +34,7 @@ public class RedoPopUpArticleActions extends TestBase{
 	@Parameters({ "sikuli" })
 	@Test
 	public void undoDeletePopUpArticleThroughContextMenu (String sikuli) throws FindFailed, InterruptedException, AWTException{
-		DeleteHelper.deleteThroughContextMenu(ArticleHelper.textAndPopUpArticle,PopUpObjectsHelper.popUpArticleText);
+		DeleteHelper.deleteThroughContextMenu(ArticleHelper.textAndPopUpArticle,PopUpObjectsHelper.popUpObjectText);
 		UndoRedoHelper.undoRedoAction();
 		ObjectHelper.finalCheck(ObjectHelper.deletionCheck);
 	}	

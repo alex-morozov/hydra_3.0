@@ -16,7 +16,7 @@ public class DeletePopUpImage extends TestBase {
 	@Parameters({ "sikuli" })
 	@Test
 	public void deletePopUpImageThroughContextMenu (String sikuli) throws FindFailed, InterruptedException, AWTException{
-		DeleteHelper.deleteThroughContextMenu(ArticleHelper.textAndPopUpImageArticle,PopUpObjectsHelper.popUpArticleText);
+		DeleteHelper.deleteThroughContextMenu(ArticleHelper.textAndPopUpImageArticle,PopUpObjectsHelper.popUpObjectText);
 		ObjectHelper.finalCheck(ObjectHelper.deletionCheck);
 	}
 

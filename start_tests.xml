@@ -11,6 +11,7 @@
 	        <package name = "com.sikuli.text"></package>
 	        <package name = "com.sikuli.audio"></package>
 	        <package name = "com.sikuli.popup.article"></package>
+	        <package name = "com.sikuli.popup.image"></package>
 	    </packages>
 	    	   	          
 		

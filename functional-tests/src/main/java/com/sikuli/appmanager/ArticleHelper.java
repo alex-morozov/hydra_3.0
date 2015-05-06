@@ -14,12 +14,15 @@ public static String formattedTextAndImageArticle = "/inputScreens/ArticleHelper
 public static String emptyArticle = "/inputScreens/ArticleHelper/emptyArticle.PNG";
 public static String textAndImageArticle = "/inputScreens/ArticleHelper/textAndImageArticle.PNG";
 public static String textAndAudioArticle = "/inputScreens/ArticleHelper/textAndAudioArticle.PNG";
+public static String textAndLinkArticle = "/inputScreens/ArticleHelper/textAndLinkArticle.PNG";
 public static String textAndPopUpArticle = "/inputScreens/ArticleHelper/textAndPopUpArticle.PNG";
 public static String textAndPopUpImageArticle = "/inputScreens/ArticleHelper/textAndPopUpImageArticle.PNG";
 public static String textArticle = "/inputScreens/ArticleHelper/textArticle.PNG";
 public static String addImageArticle = "/inputScreens/ArticleHelper/addImageArticle.PNG";
 public static String addPopUpObjectArticle = "/inputScreens/ArticleHelper/addPopUpObjectArticle.PNG";
 public static String linkArticle = "/inputScreens/ArticleHelper/linkArticle.PNG";
+
+
 
 static Screen screen = new Screen();
 

@@ -23,19 +23,7 @@ public class DeleteHelper {
 		ObjectHelper.clickButton(DeleteHelper.deleteObjectButton);			
 	}
 	
-	/*
-	 public static boolean checkDelete(String object)
-	    {
-	      try{
-	    	   ObjectHelper.findObject(object);
-	           return false;
-	         }
-	       catch(Exception e)
-	        {
-	           return true;	           
-	        }
-	    }
-	 */
+	
 	 public static void deleteFile(String path2) {
 		    try {
 		              File userData = new File(path2);
