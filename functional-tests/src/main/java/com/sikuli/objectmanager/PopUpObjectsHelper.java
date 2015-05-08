@@ -23,6 +23,7 @@ public class PopUpObjectsHelper {
 	public static String editPopUpArticleWindowTitle = "/inputScreens/PopUpObjectsHelper/editPopUpArticleWindowTitle.PNG";
 	public static String editPopUpImageWindowTitle = "/inputScreens/PopUpObjectsHelper/editPopUpImageWindowTitle.PNG";
 	public static String editLinkWindowTitle = "/inputScreens/PopUpObjectsHelper/editLinkWindowTitle.PNG";
+	public static String editExternalLinkWindowTitle = "/inputScreens/PopUpObjectsHelper/editExternalLinkWindowTitle.PNG";
 	public static String dublicationCheck = "/inputScreens/PopUpObjectsHelper/dublicationCheck.PNG";
 	public static String relocationCheck = "/inputScreens/PopUpObjectsHelper/relocationCheck.PNG";
 	public static String linkRelocationCheck = "/inputScreens/PopUpObjectsHelper/linkRelocationCheck.PNG";
@@ -31,6 +32,10 @@ public class PopUpObjectsHelper {
 	public static String undoAddingObjectCheck = "/inputScreens/PopUpObjectsHelper/undoAddingObjectCheck.PNG";
 	public static String undoRelocationCheck = "/inputScreens/PopUpObjectsHelper/undoRelocationCheck.PNG";
 	public static String urlEmptyAdress = "/inputScreens/PopUpObjectsHelper/urlEmptyAdress.PNG";
+	public static String urlFilledAdress = "/inputScreens/PopUpObjectsHelper/urlFilledAdress.PNG";
+	public static String urlChangedAdress = "/inputScreens/PopUpObjectsHelper/urlChangedAdress.PNG";
+	public static String urlDublicationCheck = "/inputScreens/PopUpObjectsHelper/urlDublicationCheck.PNG";
+	
 	
 	public static void addPopUpArticle(String stringStart, String stringFinish, String object) throws FindFailed, InterruptedException {
 		screen.dragDrop(stringStart, stringFinish);
@@ -69,6 +74,16 @@ public class PopUpObjectsHelper {
 	public static void editLink() throws FindFailed, InterruptedException, AWTException {
 		screen.mouseMove(popUpObjectText);
 		EditHelper.editObject(idLink, editLinkWindowTitle);							
+	}
+	
+	public static void editExternalLink() throws FindFailed, InterruptedException, AWTException {
+		screen.mouseMove(popUpObjectText);
+		EditHelper.editObject(idExternalLink, editExternalLinkWindowTitle);											
+	}
+
+	
+	public static void changeUrlValue() throws FindFailed {
+		ObjectHelper.typeFieldValue(urlFilledAdress, "www.google.com");
 	}
 
 

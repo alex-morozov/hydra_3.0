@@ -11,3 +11,5 @@
 1430907306159	Rename resource 'undoPopUpArticleRelocationCheck.PNG'
 1430909978962	Rename package 'com.sikuli.url'
 1430911265921	Rename resource 'idURL.PNG'
+1430912460757	Extract method 'changeUrlValue'
+1431078901530	Rename type 'UndoExternalLInkActions'
