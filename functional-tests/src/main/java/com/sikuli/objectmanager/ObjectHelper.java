@@ -82,9 +82,7 @@ public class ObjectHelper {
 		robot.keyPress(KeyEvent.VK_ENTER); 
 		robot.keyRelease(KeyEvent.VK_ENTER); 	
 		
-		Pattern openBook = new Pattern(fileImage);
-		screen.wait(openBook);
-		screen.click(openBook);		
+		ObjectHelper.clickButton(fileImage);			
 		robot.keyPress(KeyEvent.VK_ENTER); 
 		robot.keyRelease(KeyEvent.VK_ENTER);			
 		}

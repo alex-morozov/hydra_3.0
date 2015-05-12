@@ -21,12 +21,10 @@ public class AudioHelper {
 	public static String audioAndText = "/inputScreens/AudioHelper/audioAndText.PNG";
 	public static String audioFilePath = "C:/Users/alexey_morozov/Documents/AutotestsHydra/Image/source";
 	
-	public static void addAudioThroughToolbar() throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);			
-		AddHelper.addThroughToolbar(AudioHelper.addAudioToolbar);
+	public static void addAudioThroughToolbar() throws FindFailed, InterruptedException, AWTException{				
+		AddHelper.addThroughToolbar(addAudioToolbar);
 		ObjectHelper.clickButton(AddHelper.addFileButton);	
-		ObjectHelper.openFile(AudioHelper.audioFilePath, AudioHelper.audioFile);			
+		ObjectHelper.openFile(audioFilePath, audioFile);			
 	}
 
 }

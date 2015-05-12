@@ -89,24 +89,24 @@ public class TextHelper {
 	}
 	
 	public static void changeFontColor() throws FindFailed {
-		ObjectHelper.clickButton(TextHelper.fontColorBasic);
-		ObjectHelper.clickButton(TextHelper.colorPink);	
+		ObjectHelper.clickButton(fontColorBasic);
+		ObjectHelper.clickButton(colorPink);	
 		ObjectHelper.clickButtonInCertainArea(ObjectHelper.ok);
 	}
 	
 	public static void changeBackgroundColour() throws FindFailed {
-		ObjectHelper.clickButton(TextHelper.backgroundColorBasic);
-		ObjectHelper.clickButton(TextHelper.colorPink);	
+		ObjectHelper.clickButton(backgroundColorBasic);
+		ObjectHelper.clickButton(colorPink);	
 		ObjectHelper.clickButtonInCertainArea(ObjectHelper.ok);
 	}
 	
 	public static void changeLanguage() throws FindFailed {
-		ObjectHelper.clickButton(TextHelper.languageBasic);	
-		ObjectHelper.clickButton(TextHelper.swedLanguage);
+		ObjectHelper.clickButton(languageBasic);	
+		ObjectHelper.clickButton(swedLanguage);
 	}
 	
 	public static void changeAbsoluteSize() throws FindFailed {
-		ObjectHelper.typeFieldValue(TextHelper.absoluteFontSizeBasic, "22");
+		ObjectHelper.typeFieldValue(absoluteFontSizeBasic, "22");
 	}
 
 	public static void createStyleName() throws FindFailed {

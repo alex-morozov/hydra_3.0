@@ -19,6 +19,8 @@ public class AddAudio extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void addAudioThroughToolbar(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		BookHelper.openBook(BookManager.image, BookManager.openBook);
+		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
 		AudioHelper.addAudioThroughToolbar();
 		ObjectHelper.clickButton(ObjectHelper.ok);		
 	    ObjectHelper.finalCheck(AudioHelper.audio);		    
@@ -35,6 +37,16 @@ public class AddAudio extends TestBase{
 		ObjectHelper.openFile(AudioHelper.audioFilePath, AudioHelper.audioFile);
 		ObjectHelper.clickButton(ObjectHelper.ok);		
 		ObjectHelper.finalCheck(AudioHelper.audio);			
+	}
+	
+	@Parameters({ "sikuli" })	
+	@Test
+		public void cancelAddAudioThroughToolbar(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		BookHelper.openBook(BookManager.image, BookManager.openBook);
+		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
+		AudioHelper.addAudioThroughToolbar();
+		ObjectHelper.clickButton(ObjectHelper.cancel);		
+	    ObjectHelper.finalCheck(ArticleHelper.emptyArticle);		    
 	}
 
 }

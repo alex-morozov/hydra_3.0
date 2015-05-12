@@ -22,6 +22,8 @@ public class RedoAudioActions extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void redoAddingAudio(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		BookHelper.openBook(BookManager.image, BookManager.openBook);
+		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
 		AudioHelper.addAudioThroughToolbar();
 		ObjectHelper.clickButton(ObjectHelper.ok);
 		UndoRedoHelper.undoRedoAction();

@@ -21,6 +21,8 @@ public class UndoAudioActions  extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void undoAddingImage(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		BookHelper.openBook(BookManager.image, BookManager.openBook);
+		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
 		AudioHelper.addAudioThroughToolbar();
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		UndoRedoHelper.undoAction();
