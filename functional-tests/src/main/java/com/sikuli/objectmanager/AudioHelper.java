@@ -1,13 +1,9 @@
 package com.sikuli.objectmanager;
 
 import java.awt.AWTException;
-
 import org.sikuli.script.FindFailed;
-
 import com.sikuli.appmanager.AddHelper;
-import com.sikuli.appmanager.ArticleHelper;
-import com.sikuli.appmanager.BookHelper;
-import com.sikuli.appmanager.BookManager;
+
 
 public class AudioHelper {
 	public static String addAudioToolbar = "/inputScreens/AudioHelper/addAudioToolbar.PNG";

@@ -18,8 +18,7 @@ public class DeleteHelper {
 		ArticleHelper.openArticle(article);
 		ObjectHelper.findObject(object);
 		screen.mouseMove(object);
-		screen.mouseDown(Button.RIGHT);
-		screen.mouseUp(Button.RIGHT);
+		screen.rightClick();
 		ObjectHelper.clickButton(DeleteHelper.deleteObjectButton);			
 	}
 	

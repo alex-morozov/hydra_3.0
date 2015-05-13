@@ -1,8 +1,6 @@
 package com.sikuli.appmanager;
 
 import java.awt.AWTException;
-
-import org.sikuli.script.Button;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Screen;
 import com.sikuli.objectmanager.ObjectHelper;
@@ -37,8 +35,7 @@ public EditHelper getEditHelper() {
 		}
 	
 	public static void cancelObjectHighlighting  (){
-		screen.mouseDown(Button.RIGHT);
-		screen.mouseUp(Button.RIGHT);	
+		screen.rightClick();	
 	}
 
 

@@ -23,7 +23,8 @@ public class AddAudio extends TestBase{
 		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
 		AudioHelper.addAudioThroughToolbar();
 		ObjectHelper.clickButton(ObjectHelper.ok);		
-	    ObjectHelper.finalCheck(AudioHelper.audio);		    
+	    screen.mouseMove(AudioHelper.audio);
+	    ObjectHelper.finalCheck(AudioHelper.idAudio);
 	}
 	
 	@Parameters({ "sikuli" })
@@ -36,7 +37,8 @@ public class AddAudio extends TestBase{
 		ObjectHelper.clickButton(AddHelper.addFileButton);	
 		ObjectHelper.openFile(AudioHelper.audioFilePath, AudioHelper.audioFile);
 		ObjectHelper.clickButton(ObjectHelper.ok);		
-		ObjectHelper.finalCheck(AudioHelper.audio);			
+		screen.mouseMove(AudioHelper.audio);
+	    ObjectHelper.finalCheck(AudioHelper.idAudio);			
 	}
 	
 	@Parameters({ "sikuli" })	

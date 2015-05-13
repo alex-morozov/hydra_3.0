@@ -37,7 +37,7 @@ public class ObjectHelper {
 	
 	public static void finalCheck(String object) throws FindFailed	{
 		Pattern check = new Pattern (object);
-		check.similar((float) 1.00);		
+		check.exact();		
 		}
 	
 	public static void changeFieldValue(String field,String value) throws FindFailed, AWTException	{
@@ -58,7 +58,7 @@ public class ObjectHelper {
 	public static void highlightAndDeleteAllContent(String object) throws FindFailed, AWTException	{
 		Robot robot = new Robot();
 		highlightAllContent(object);
-		robot.keyRelease(KeyEvent.VK_DELETE);
+		robot.keyPress(KeyEvent.VK_DELETE);
 		robot.keyRelease(KeyEvent.VK_DELETE);
 	}
 
@@ -111,8 +111,7 @@ public class ObjectHelper {
 		findObject(object);
 		screen.mouseMove(object);
 		robot.keyPress(KeyEvent.VK_CONTROL);
-		screen.mouseDown(Button.LEFT);
-		screen.mouseUp(Button.LEFT);
+		screen.click();
 		robot.keyRelease(KeyEvent.VK_CONTROL);		
 	}
 

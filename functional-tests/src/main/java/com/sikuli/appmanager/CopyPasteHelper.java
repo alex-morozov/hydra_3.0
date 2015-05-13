@@ -19,8 +19,7 @@ public static String pasteAstext = "/inputScreens/CopyPasteHelper/pasteAstext.PN
 public static void copyPasteObject (String object) throws FindFailed, AWTException{
 	ObjectHelper.findObject(object);
 	screen.mouseMove(object);
-	screen.mouseDown(Button.RIGHT);
-	screen.mouseUp(Button.RIGHT);
+	screen.rightClick();
 	ObjectHelper.clickButton(copyObjectButton);	
 	Robot robot = new Robot();
 	robot.keyPress(KeyEvent.VK_CONTROL);

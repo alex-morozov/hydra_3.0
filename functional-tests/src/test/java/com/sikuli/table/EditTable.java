@@ -6,54 +6,31 @@ import org.sikuli.script.FindFailed;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.sikuli.appmanager.AddHelper;
 import com.sikuli.appmanager.ArticleHelper;
 import com.sikuli.appmanager.BookHelper;
 import com.sikuli.appmanager.BookManager;
 import com.sikuli.common.TestBase;
 import com.sikuli.objectmanager.ObjectHelper;
-import com.sikuli.objectmanager.TableHelper;
 import static com.sikuli.objectmanager.TableHelper.*;
 
-public class AddTable extends TestBase{	
-	
+
+public class EditTable extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
-		public void addTableThroughToolbar(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void cancelEditTable(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();
-		ObjectHelper.clickButton(ObjectHelper.ok);	
-		ObjectHelper.finalCheck(table);	   
-	}
-	
-	@Parameters({ "sikuli" })
-	@Test
-	public void addTableThroughContextMenu(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);
-		AddHelper.addThroughContextMenu(ArticleHelper.emptyArticle, AddHelper.addTable);		
-		ObjectHelper.clickButton(ObjectHelper.ok);		
-		ObjectHelper.finalCheck(table);			
-	}
-	
-	@Parameters({ "sikuli" })	
-	@Test
-		public void cancelAddTableThroughToolbar(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();
+		ArticleHelper.openArticle(ArticleHelper.textAndTableArticle);	
+		editTable(bigTable);
 		ObjectHelper.clickButton(ObjectHelper.cancel);		
-	    ObjectHelper.finalCheck(ArticleHelper.emptyArticle);		    
+	    ObjectHelper.finalCheck(bigTable);		    
 	}
 	
 	@Parameters({ "sikuli" })	
 	@Test
-		public void addTableWithChangedBackgroundColourForAllCells(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void editTableChangeBackgroundColourForAllCells(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();		
+		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		editTable(table);	
 		changeBackgroundColourAndConfirm(allTableCellStyle);		
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.finalCheck(BackgroundColourCheck);	   
@@ -61,10 +38,10 @@ public class AddTable extends TestBase{
 	
 	@Parameters({ "sikuli" })	
 	@Test
-		public void addTableWithChangedBorderColourForAllCells(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void editTableChangeBorderColourForAllCells(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();		
+		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		editTable(table);	
 		changeBorderColourAndConfirm(allTableCellStyle);		
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.finalCheck(BorderColourCheck);	   
@@ -72,10 +49,10 @@ public class AddTable extends TestBase{
 	
 	@Parameters({ "sikuli" })	
 	@Test
-		public void addTableWithChangedBorderWidthForAllCells(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void editTableChangeBorderWidthForAllCells(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();		
+		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		editTable(table);			
 		changeBorderWidthAndConfirm(allTableCellStyle);		
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.finalCheck(BorderWidthCheck);	   
@@ -83,10 +60,10 @@ public class AddTable extends TestBase{
 	
 	@Parameters({ "sikuli" })	
 	@Test
-		public void addTableWithChangedBackgroundColourForTableRow(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void editTableChangeBackgroundColourForTableRow(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();		
+		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		editTable(table);		
 		changeBackgroundColourAndConfirm(rowCellStyle);		
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.finalCheck(BackgroundColourRowCheck);	   
@@ -94,10 +71,10 @@ public class AddTable extends TestBase{
 	
 	@Parameters({ "sikuli" })	
 	@Test
-		public void addTableWithChangedBorderColourForTableRow(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void editTableChangeBorderColourForTableRow(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();		
+		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		editTable(table);		
 		changeBorderColourAndConfirm(rowCellStyle);		
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.finalCheck(BorderColourRowCheck);	   
@@ -105,10 +82,10 @@ public class AddTable extends TestBase{
 	
 	@Parameters({ "sikuli" })	
 	@Test
-		public void addTableWithChangedBorderWidthForTableRow(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void editTableChangeBorderWidthForTableRow(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();		
+		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		editTable(table);	
 		changeBorderWidthAndConfirm(rowCellStyle);		
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.finalCheck(BorderWidthRowCheck);	   
@@ -116,10 +93,10 @@ public class AddTable extends TestBase{
 	
 	@Parameters({ "sikuli" })	
 	@Test
-		public void addTableWithChangedBackgroundColourForTableColumn(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void editTableChangeBackgroundColourForTableColumn(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();		
+		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		editTable(table);		
 		changeBackgroundColourAndConfirm(columnCellStyle);		
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.finalCheck(BackgroundColourColumnCheck);	   
@@ -127,10 +104,10 @@ public class AddTable extends TestBase{
 	
 	@Parameters({ "sikuli" })	
 	@Test
-		public void addTableWithChangedBorderColourForTableColumn(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void editTableChangeBorderColourForTableColumn(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();		
+		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		editTable(table);			
 		changeBorderColourAndConfirm(columnCellStyle);		
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.finalCheck(BorderColourColumnCheck);	   
@@ -138,10 +115,10 @@ public class AddTable extends TestBase{
 	
 	@Parameters({ "sikuli" })	
 	@Test
-		public void addTableWithChangedBorderWidthForTableColumn(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void editTableChangeBorderWidthForTableColumn(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();		
+		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		editTable(table);	
 		changeBorderWidthAndConfirm(columnCellStyle);		
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.finalCheck(BorderWidthColumnCheck);	   
@@ -149,10 +126,10 @@ public class AddTable extends TestBase{
 	
 	@Parameters({ "sikuli" })	
 	@Test
-		public void addTableWithChangedBackgroundColourForSingleCell(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void editTableChangeBackgroundColourForSingleCell(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();		
+		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		editTable(table);	
 		changeBackgroundColourAndConfirm(singleCellStyle);		
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.finalCheck(BackgroundColourSingleCellCheck);	   
@@ -160,10 +137,10 @@ public class AddTable extends TestBase{
 	
 	@Parameters({ "sikuli" })	
 	@Test
-		public void addTableWithChangedBorderColourForSingleCell(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void editTableChangeBorderColourForSingleCell(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();		
+		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		editTable(table);	
 		changeBorderColourAndConfirm(singleCellStyle);		
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.finalCheck(BorderColourSingleCellCheck);	   
@@ -171,10 +148,10 @@ public class AddTable extends TestBase{
 	
 	@Parameters({ "sikuli" })	
 	@Test
-		public void addTableWithChangedBorderWidthForSingleCell(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void editTableChangeBorderWidthForSingleCell(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();		
+		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		editTable(table);		
 		changeBorderWidthAndConfirm(singleCellStyle);		
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.finalCheck(BorderWidthSingleCellCheck);	   
@@ -182,10 +159,10 @@ public class AddTable extends TestBase{
 	
 	@Parameters({ "sikuli" })	
 	@Test
-		public void addTableWithAddedRow(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void editTableAddRow(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();		
+		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		editTable(table);	
 		addCells(rowCellStyle);		
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.finalCheck(addRowCheck);	   
@@ -193,10 +170,10 @@ public class AddTable extends TestBase{
 	
 	@Parameters({ "sikuli" })	
 	@Test
-		public void addTableWithAddedColumn(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void editTableAddColumn(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();		
+		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		editTable(table);		
 		addCells(columnCellStyle);		
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.finalCheck(addColumnCheck);	   
@@ -204,10 +181,10 @@ public class AddTable extends TestBase{
 	
 	@Parameters({ "sikuli" })	
 	@Test
-		public void addTableWithDeletedRow(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void editTableDeleteRow(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();		
+		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		editTable(table);	
 		deleteCells(rowCellStyle);		
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.finalCheck(deleteRowCheck);	   
@@ -215,10 +192,10 @@ public class AddTable extends TestBase{
 	
 	@Parameters({ "sikuli" })	
 	@Test
-		public void addTableWithDeletedColumn(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void editTableDeleteColumn(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();		
+		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		editTable(table);		
 		deleteCells(columnCellStyle);		
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.finalCheck(deleteColumnCheck);	   
@@ -226,10 +203,10 @@ public class AddTable extends TestBase{
 	
 	@Parameters({ "sikuli" })	
 	@Test
-		public void addTableJoinRows(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void editTableJoinRows(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();		
+		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		editTable(table);		
 		addCells(rowCellStyle);
 		joinCells(columnCellStyle, join);
 		ObjectHelper.clickButton(ObjectHelper.ok);	
@@ -238,10 +215,10 @@ public class AddTable extends TestBase{
 	
 	@Parameters({ "sikuli" })	
 	@Test
-		public void addTableJoinColumns(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void editTableJoinColumns(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();		
+		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		editTable(table);		
 		addCells(columnCellStyle);
 		joinCells(rowCellStyle, join);
 		ObjectHelper.clickButton(ObjectHelper.ok);	
@@ -250,10 +227,10 @@ public class AddTable extends TestBase{
 	
 	@Parameters({ "sikuli" })	
 	@Test
-		public void addTableJoinCellsDown(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void editTableJoinCellsDown(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();		
+		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		editTable(table);		
 		joinCells(singleCellStyle, joinCellsDown);
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.finalCheck(joinCellsDownCheck);	   
@@ -261,10 +238,10 @@ public class AddTable extends TestBase{
 	
 	@Parameters({ "sikuli" })	
 	@Test
-		public void addTableJoinCellsToRight(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void editTableJoinCellsToRight(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();		
+		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		editTable(table);		
 		joinCells(singleCellStyle, joinCellsToRight);
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.finalCheck(joinCellsToRightCheck);	   
@@ -274,8 +251,8 @@ public class AddTable extends TestBase{
 	@Test
 		public void cancelChangingBackgroundColour(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();		
+		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		editTable(table);	
 		changeBackgroundColour(allTableCellStyle);		
 		ObjectHelper.clickButton(ObjectHelper.cancel);	
 		ObjectHelper.clickButton(ObjectHelper.ok);	
@@ -286,8 +263,8 @@ public class AddTable extends TestBase{
 	@Test
 		public void cancelChangingBorderColour(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();		
+		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		editTable(table);	
 		changeBorderColour(allTableCellStyle);		
 		ObjectHelper.clickButton(ObjectHelper.cancel);	
 		ObjectHelper.clickButton(ObjectHelper.ok);	
@@ -298,12 +275,14 @@ public class AddTable extends TestBase{
 	@Test
 		public void cancelChangingBorderWidth(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
-		TableHelper.addTableThroughToolbar();		
+		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		editTable(table);	
 		changeBorderWidth(allTableCellStyle);		
 		ObjectHelper.clickButton(ObjectHelper.cancel);	
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.finalCheck(table); 
 	}		
+
+	
 
 }

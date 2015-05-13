@@ -16,8 +16,7 @@ public class BookHelper {
 	
 public static void openBook (String bookAdress, String bookImage) throws FindFailed, InterruptedException, AWTException{
 	ObjectHelper.openFile(bookAdress, bookImage);	
-	screen.wait(maximize);
-	screen.click(maximize);	
+	ObjectHelper.clickButton(maximize);	
 	}
 
 
