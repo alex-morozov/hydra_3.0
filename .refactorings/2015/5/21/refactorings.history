@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.sikuli.table.UndoRedoTableActions&apos; to &apos;RedoTableActions&apos;&#x0D;&#x0A;- Original project: &apos;Hydra_3.0&apos;&#x0D;&#x0A;- Original element: &apos;com.sikuli.table.UndoRedoTableActions&apos;&#x0D;&#x0A;- Renamed element: &apos;com.sikuli.table.RedoTableActions&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Rename similarly named elements&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;UndoRedoTableActions&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/functional-tests\/src\/test\/java&lt;com.sikuli.table{UndoRedoTableActions.java[UndoRedoTableActions" matchStrategy="1" name="RedoTableActions" qualified="false" references="true" similarDeclarations="true" stamp="1432108915792" textual="true" version="1.0"/>
+</session>

@@ -1,11 +1,9 @@
 package com.sikuli.external.link;
 
 import java.awt.AWTException;
-
 import org.sikuli.script.FindFailed;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import com.sikuli.appmanager.ArticleHelper;
 import com.sikuli.appmanager.DeleteHelper;
 import com.sikuli.common.TestBase;

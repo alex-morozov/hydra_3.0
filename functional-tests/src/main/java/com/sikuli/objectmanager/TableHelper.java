@@ -49,6 +49,9 @@ public class TableHelper {
 	public static String joinRowsCheck = "/inputScreens/TableHelper/joinRowsCheck.PNG";
 	public static String joinCellsDownCheck = "/inputScreens/TableHelper/joinCellsDownCheck.PNG";
 	public static String joinCellsToRightCheck = "/inputScreens/TableHelper/joinCellsToRightCheck.PNG";
+	public static String tableDublicationCheck = "/inputScreens/TableHelper/tableDublicationCheck.PNG";
+	public static String tableRelocationCheck = "/inputScreens/TableHelper/tableRelocationCheck.PNG";
+	public static String undoTableRelocationOrDublicationCheck = "/inputScreens/TableHelper/undoTableRelocationOrDublicationCheck.PNG";
 	
 
 	public static void addTableThroughToolbar() throws FindFailed, InterruptedException, AWTException{				

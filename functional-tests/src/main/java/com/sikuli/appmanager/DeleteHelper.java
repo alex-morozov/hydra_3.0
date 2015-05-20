@@ -22,6 +22,13 @@ public class DeleteHelper {
 		ObjectHelper.clickButton(DeleteHelper.deleteObjectButton);			
 	}
 	
+	public static void deleteThroughId (String object, String objectId) throws FindFailed, InterruptedException, AWTException{				
+		screen.mouseMove(object);
+		screen.mouseMove(objectId);
+		screen.rightClick();
+		ObjectHelper.clickButton(DeleteHelper.deleteObjectButton);			
+	}
+	
 	
 	 public static void deleteFile(String path2) {
 		    try {
