@@ -20,6 +20,7 @@ public class AddHelper {
 	public static String addTable = "/inputScreens/AddHelper/addTable.PNG";
 	public static String addLink = "/inputScreens/AddHelper/addLink.PNG";
 	public static String addExternalLink = "/inputScreens/AddHelper/addExternalLink.PNG";
+	public static String addTest = "/inputScreens/AddHelper/addTest.PNG";
 	public static String addStyleName = "/inputScreens/AddHelper/addStyleName.PNG";
 	public static String addSubObjectPlusButton = "/inputScreens/AddHelper/addSubObjectPlusButton.PNG";
 	public static String addFileButton = "/inputScreens/AddHelper/addFileButton.PNG";

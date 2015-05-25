@@ -26,6 +26,10 @@ public static String textArticle = "/inputScreens/ArticleHelper/textArticle.PNG"
 public static String addImageArticle = "/inputScreens/ArticleHelper/addImageArticle.PNG";
 public static String addPopUpObjectArticle = "/inputScreens/ArticleHelper/addPopUpObjectArticle.PNG";
 public static String linkArticle = "/inputScreens/ArticleHelper/linkArticle.PNG";
+public static String checkBoxTestArticle = "/inputScreens/ArticleHelper/checkBoxTestArticle.PNG";
+public static String radioButtonTestArticle = "/inputScreens/ArticleHelper/radioButtonTestArticle.PNG";
+public static String freeAnswerTestArticle = "/inputScreens/ArticleHelper/freeAnswerTestArticle.PNG";
+public static String reorderingTestArticle = "/inputScreens/ArticleHelper/reorderingTestArticle.PNG";
 
 
 
