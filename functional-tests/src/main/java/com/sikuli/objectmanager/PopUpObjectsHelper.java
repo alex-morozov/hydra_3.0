@@ -9,7 +9,7 @@ import com.sikuli.appmanager.AddHelper;
 import com.sikuli.appmanager.ArticleHelper;
 import com.sikuli.appmanager.EditHelper;
 
-public class PopUpObjectsHelper {
+public class PopUpObjectsHelper extends ObjectHelper{
 	static Screen screen = new Screen();
 	
 	public static String highlightedText = "/inputScreens/PopUpObjectsHelper/highligtedText.PNG";
@@ -52,13 +52,13 @@ public class PopUpObjectsHelper {
 	public static void addLink(String stringStart2, String stringFinish2, String object) throws FindFailed, InterruptedException, AWTException {
 		screen.dragDrop(stringStart, stringFinish);
 		AddHelper.addThroughContextMenu(object, AddHelper.addLink);
-		ObjectHelper.clickButtonInCertainArea(ArticleHelper.addImageArticle);		
+		clickButtonInCertainArea(ArticleHelper.addImageArticle);		
 	}
 	
 	public static void addExternalLink(String stringStart2, String stringFinish2, String object) throws FindFailed, InterruptedException, AWTException {
 		screen.dragDrop(stringStart, stringFinish);
 		AddHelper.addThroughContextMenu(object, AddHelper.addExternalLink);
-		ObjectHelper.typeFieldValue(urlEmptyAdress, "www.yandex.ru");		
+		typeFieldValue(urlEmptyAdress, "www.yandex.ru");		
 	}
 	
 	public static void editPopUpArticle() throws FindFailed, InterruptedException, AWTException {

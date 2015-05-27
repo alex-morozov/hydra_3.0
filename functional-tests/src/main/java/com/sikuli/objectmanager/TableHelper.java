@@ -8,7 +8,7 @@ import com.sikuli.appmanager.AddHelper;
 import com.sikuli.appmanager.DeleteHelper;
 import com.sikuli.appmanager.EditHelper;
 
-public class TableHelper {
+public class TableHelper extends ObjectHelper {
 	
 	static Screen screen = new Screen();
 	
@@ -60,53 +60,53 @@ public class TableHelper {
 
 	public static void changeBackgroundColourAndConfirm(String cell) throws FindFailed {
 		changeBackgroundColour(cell);		
-		ObjectHelper.clickButtonInCertainArea(ObjectHelper.ok);		
+		clickButtonInCertainArea(ObjectHelper.ok);		
 	}
 	
 	public static void changeBackgroundColour(String cell) throws FindFailed {
-		ObjectHelper.openContextMenu(cell);
-		ObjectHelper.clickButton(style);
-		ObjectHelper.clickButton(backgroundColour);		
-		ObjectHelper.clickButton(TextHelper.colorPink);					
+		openContextMenu(cell);
+		clickButton(style);
+		clickButton(backgroundColour);		
+		clickButton(TextHelper.colorPink);					
 	}
 	
 	public static void changeBorderColourAndConfirm(String cell) throws FindFailed {
 		changeBorderColour(cell);	
-		ObjectHelper.clickButtonInCertainArea(ObjectHelper.ok);		
+		clickButtonInCertainArea(ObjectHelper.ok);		
 	}
 	
 	public static void changeBorderColour(String cell) throws FindFailed {
-		ObjectHelper.openContextMenu(cell);
-		ObjectHelper.clickButton(style);
-		ObjectHelper.clickButton(borderColour);		
-		ObjectHelper.clickButton(TextHelper.colorPink);				
+		openContextMenu(cell);
+		clickButton(style);
+		clickButton(borderColour);		
+		clickButton(TextHelper.colorPink);				
 	}
 	
 	public static void changeBorderWidthAndConfirm(String cell) throws FindFailed, AWTException {
 		changeBorderWidth(cell);
-		ObjectHelper.clickButtonInCertainArea(ObjectHelper.ok);		
+		clickButtonInCertainArea(ObjectHelper.ok);		
 	}
 	
 	public static void changeBorderWidth(String cell) throws FindFailed, AWTException {
-		ObjectHelper.openContextMenu(cell);
-		ObjectHelper.clickButton(style);
-		ObjectHelper.clickButton(borderWidth);		
-		ObjectHelper.changeFieldValue(borderWidthBasic, "10");				
+		openContextMenu(cell);
+		clickButton(style);
+		clickButton(borderWidth);		
+		changeFieldValue(borderWidthBasic, "10");				
 	}
 	
 	public static void addCells(String cell) throws FindFailed, AWTException {
-		ObjectHelper.openContextMenu(cell);
-		ObjectHelper.clickButton(AddHelper.addContextMenu);			
+		openContextMenu(cell);
+		clickButton(AddHelper.addContextMenu);			
 	}
 	
 	public static void deleteCells(String cell) throws FindFailed, AWTException {
-		ObjectHelper.openContextMenu(cell);
-		ObjectHelper.clickButton(DeleteHelper.deleteObjectButton);			
+		openContextMenu(cell);
+		clickButton(DeleteHelper.deleteObjectButton);			
 	}
 	
 	public static void joinCells(String cell, String joinType) throws FindFailed, AWTException {
-		ObjectHelper.openContextMenu(cell);
-		ObjectHelper.clickButton(joinType);			
+		openContextMenu(cell);
+		clickButton(joinType);			
 	}
 	
 	public static void editTable(String table) throws FindFailed, InterruptedException, AWTException {

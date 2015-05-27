@@ -20,6 +20,9 @@ public class ObjectHelper {
 	public static String cancel = "/inputScreens/ObjectHelper/cancel.PNG";	
 	public static String chooseData="/inputScreens/Common_folder/ChooseData.PNG";
 	public static String deletionCheck = "/inputScreens/ObjectHelper/deletionCheck.PNG";
+	public static String emptySpace = "/inputScreens/ObjectHelper/emptySpace.PNG";
+	public static String up = "/inputScreens/ObjectHelper/up.PNG";
+	public static String down = "/inputScreens/ObjectHelper/down.PNG";
 	
 	public static void clickButton(String button) throws FindFailed	{
 	screen.wait(button);
@@ -51,7 +54,7 @@ public class ObjectHelper {
 	}
 	
 	public static void typeFieldValue(String field,String value) throws FindFailed{
-		ObjectHelper.clickButton(field);		
+		clickButton(field);		
 		screen.type(value);
 	}
 	
@@ -60,6 +63,10 @@ public class ObjectHelper {
 		highlightAllContent(object);
 		robot.keyPress(KeyEvent.VK_DELETE);
 		robot.keyRelease(KeyEvent.VK_DELETE);
+	}
+	
+	public static void cancelHighlighting() throws FindFailed{
+		clickButton(emptySpace);		
 	}
 
 	
@@ -82,7 +89,7 @@ public class ObjectHelper {
 		robot.keyPress(KeyEvent.VK_ENTER); 
 		robot.keyRelease(KeyEvent.VK_ENTER); 	
 		
-		ObjectHelper.clickButton(fileImage);			
+		clickButton(fileImage);			
 		robot.keyPress(KeyEvent.VK_ENTER); 
 		robot.keyRelease(KeyEvent.VK_ENTER);			
 		}
@@ -97,6 +104,14 @@ public class ObjectHelper {
 
 	public ObjectHelper getObjectHelper() {
 		return objectHelper;
+	}
+
+	public static void cancel() throws FindFailed {
+		clickButton(cancel);
+	}
+
+	public static void confirm() throws FindFailed {
+		clickButton(ok);
 	}
 
 	public static void openContextMenu(String object) throws FindFailed {

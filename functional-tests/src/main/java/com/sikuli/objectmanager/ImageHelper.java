@@ -8,7 +8,7 @@ import com.sikuli.appmanager.BookHelper;
 import com.sikuli.appmanager.BookManager;
 
 
-public class ImageHelper {
+public class ImageHelper extends ObjectHelper {
 private ImageHelper imageHelper;
 
 public static String addImageMenu = "/inputScreens/ImageHelper/addImageMenu.PNG";
@@ -71,35 +71,35 @@ public static void addImageThroughToolbar() throws FindFailed, InterruptedExcept
 }
 
 public static void addImageFile() throws FindFailed, InterruptedException, AWTException {
-	ObjectHelper.clickButton(AddHelper.addFileButton);	
-	ObjectHelper.openFile(ImageHelper.imageFilePath, ImageHelper.imageFile);
+	clickButton(AddHelper.addFileButton);	
+	openFile(ImageHelper.imageFilePath, ImageHelper.imageFile);
 }
 
 public static void changeImageFile(String button) throws FindFailed, InterruptedException, AWTException {
-	ObjectHelper.clickButton(button);	
-	ObjectHelper.openFile(ImageHelper.imageFilePath, ImageHelper.changeImageFile);
+	clickButton(button);	
+	openFile(ImageHelper.imageFilePath, ImageHelper.changeImageFile);
 }
 
 public static void createHighlightedImageArea() throws FindFailed, InterruptedException, AWTException{
-	ObjectHelper.screen.dragDrop(ImageHelper.createImageAreaStart, ImageHelper.createImageAreaFinish);		
+	screen.dragDrop(ImageHelper.createImageAreaStart, ImageHelper.createImageAreaFinish);		
 }
 
 public static void setImageAreaCoordinates() throws FindFailed, InterruptedException, AWTException{
-	ObjectHelper.screen.paste(ImageHelper.setImageAreaCoordinatesFirstValueEmpty, "10");
-	ObjectHelper.screen.paste(ImageHelper.setImageAreaCoordinatesSecondValueEmpty, "22");
-	ObjectHelper.screen.paste(ImageHelper.setImageAreaSizeFirstValueEmpty, "21");
-	ObjectHelper.screen.paste(ImageHelper.setImageAreaSizeSecondValueEmpty, "53");	
+	screen.paste(ImageHelper.setImageAreaCoordinatesFirstValueEmpty, "10");
+	screen.paste(ImageHelper.setImageAreaCoordinatesSecondValueEmpty, "22");
+	screen.paste(ImageHelper.setImageAreaSizeFirstValueEmpty, "21");
+	screen.paste(ImageHelper.setImageAreaSizeSecondValueEmpty, "53");	
 }
 
 public static void editHighlightedImageArea() throws FindFailed, InterruptedException, AWTException{
-	ObjectHelper.screen.dragDrop(ImageHelper.editImageAreaStart, ImageHelper.editImageAreaFinish);		
+	screen.dragDrop(ImageHelper.editImageAreaStart, ImageHelper.editImageAreaFinish);		
 }
 
 public static void editImageAreaCoordinates() throws FindFailed, InterruptedException, AWTException{
-	ObjectHelper.changeFieldValue(ImageHelper.editImageAreaCoordinatesFirstValue, "68");
-	ObjectHelper.changeFieldValue(ImageHelper.editImageAreaCoordinatesSecondValue, "16");
-	ObjectHelper.changeFieldValue(ImageHelper.editImageAreaSizeFirstValue, "16");
-	ObjectHelper.changeFieldValue(ImageHelper.editImageAreaSizeSecondValue, "52");	
+	changeFieldValue(ImageHelper.editImageAreaCoordinatesFirstValue, "68");
+	changeFieldValue(ImageHelper.editImageAreaCoordinatesSecondValue, "16");
+	changeFieldValue(ImageHelper.editImageAreaSizeFirstValue, "16");
+	changeFieldValue(ImageHelper.editImageAreaSizeSecondValue, "52");	
 }
 
 public ImageHelper getImageHelper(){
@@ -108,17 +108,17 @@ public ImageHelper getImageHelper(){
 
 
 public static void changeImageSizeProportionally() throws FindFailed, AWTException {
-	ObjectHelper.clickButton(tabSize);
-	ObjectHelper.clickButton(proportionalChangeButton);		
-	ObjectHelper.changeFieldValue(imageWidth, "700");	
-	ObjectHelper.clickButton(imageHeight);
+	clickButton(tabSize);
+	clickButton(proportionalChangeButton);		
+	changeFieldValue(imageWidth, "700");	
+	clickButton(imageHeight);
 }
 
 
 public static void changeImageSizeManually() throws FindFailed, AWTException {
-	ObjectHelper.clickButton(ImageHelper.tabSize);		
-	ObjectHelper.changeFieldValue(imageWidth, "700");			
-	ObjectHelper.changeFieldValue(imageHeight, "490");
+	clickButton(ImageHelper.tabSize);		
+	changeFieldValue(imageWidth, "700");			
+	changeFieldValue(imageHeight, "490");
 }
 
 }

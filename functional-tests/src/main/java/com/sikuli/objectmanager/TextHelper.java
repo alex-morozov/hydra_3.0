@@ -6,7 +6,7 @@ import java.awt.event.KeyEvent;
 
 import org.sikuli.script.FindFailed;
 
-public class TextHelper {
+public class TextHelper extends ObjectHelper {
 	public static String changedLetterCheck = "/inputScreens/TextHelper/changedLetterCheck.PNG";
 	public static String relocationCheck = "/inputScreens/TextHelper/relocationCheck.PNG";
 	public static String formatPainterUse = "/inputScreens/TextHelper/formatPainterUse.PNG";
@@ -59,64 +59,64 @@ public class TextHelper {
 	public static String use = "/inputScreens/TextHelper/StylePanel/use.PNG";
 	
 	public static void editStyleFromPanel() throws FindFailed {
-		ObjectHelper.openContextMenu(styleForEdit);
-		ObjectHelper.clickButton(edit);
+		openContextMenu(styleForEdit);
+		clickButton(edit);
 	}
 	
 	public static void editStyleFromPanel(String style) throws FindFailed {
-		ObjectHelper.openContextMenu(style);
-		ObjectHelper.clickButton(edit);
+		openContextMenu(style);
+		clickButton(edit);
 	}
 	
 	public static void createStyleFromPanel() throws FindFailed {
-		ObjectHelper.openContextMenu(styleForEdit);
-		ObjectHelper.clickButton(create);
+		openContextMenu(styleForEdit);
+		clickButton(create);
 	}
 	
 	public static void dublicateStyleFromPanel() throws FindFailed {
-		ObjectHelper.openContextMenu(styleForEdit);
-		ObjectHelper.clickButton(dublicate);
+		openContextMenu(styleForEdit);
+		clickButton(dublicate);
 	}
 
 	public static void changeFont() throws FindFailed {
-		ObjectHelper.clickButton(fontNameBasic);
-		ObjectHelper.clickButton(timesNewRoman);
+		clickButton(fontNameBasic);
+		clickButton(timesNewRoman);
 	}
 
 	public static void changeRelativeSize() throws FindFailed {
-		ObjectHelper.clickButton(smallRelativeSize);	
-		ObjectHelper.clickButton(bigRelativeSize);
+		clickButton(smallRelativeSize);	
+		clickButton(bigRelativeSize);
 	}
 	
 	public static void changeFontColor() throws FindFailed {
-		ObjectHelper.clickButton(fontColorBasic);
-		ObjectHelper.clickButton(colorPink);	
-		ObjectHelper.clickButtonInCertainArea(ObjectHelper.ok);
+		clickButton(fontColorBasic);
+		clickButton(colorPink);	
+		clickButtonInCertainArea(ObjectHelper.ok);
 	}
 	
 	public static void changeBackgroundColour() throws FindFailed {
-		ObjectHelper.clickButton(backgroundColorBasic);
-		ObjectHelper.clickButton(colorPink);	
-		ObjectHelper.clickButtonInCertainArea(ObjectHelper.ok);
+		clickButton(backgroundColorBasic);
+		clickButton(colorPink);	
+		clickButtonInCertainArea(ObjectHelper.ok);
 	}
 	
 	public static void changeLanguage() throws FindFailed {
-		ObjectHelper.clickButton(languageBasic);	
-		ObjectHelper.clickButton(swedLanguage);
+		clickButton(languageBasic);	
+		clickButton(swedLanguage);
 	}
 	
 	public static void changeAbsoluteSize() throws FindFailed {
-		ObjectHelper.typeFieldValue(absoluteFontSizeBasic, "22");
+		typeFieldValue(absoluteFontSizeBasic, "22");
 	}
 
 	public static void createStyleName() throws FindFailed {
-		ObjectHelper.typeFieldValue(emptyStyleName,"New Style");
+		typeFieldValue(emptyStyleName,"New Style");
 	}	
 	
 	
 	public static void useFormatPainter(String borrowFormat, String applyFormat) throws FindFailed, AWTException {
 		Robot robot = new Robot();
-		ObjectHelper.clickButton(borrowFormat);
+		clickButton(borrowFormat);
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_SHIFT);
 		robot.keyPress(KeyEvent.VK_C);
@@ -124,7 +124,7 @@ public class TextHelper {
 		robot.keyRelease(KeyEvent.VK_SHIFT);
 		robot.keyRelease(KeyEvent.VK_C);
 		
-		ObjectHelper.clickButton(applyFormat);
+		clickButton(applyFormat);
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_SHIFT);
 		robot.keyPress(KeyEvent.VK_V);

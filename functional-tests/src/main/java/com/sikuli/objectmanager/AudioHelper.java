@@ -5,7 +5,7 @@ import org.sikuli.script.FindFailed;
 import com.sikuli.appmanager.AddHelper;
 
 
-public class AudioHelper {
+public class AudioHelper extends ObjectHelper {
 	public static String addAudioToolbar = "/inputScreens/AudioHelper/addAudioToolbar.PNG";
 	public static String audioFile = "/inputScreens/AudioHelper/audioFile.PNG";
 	public static String audio = "/inputScreens/AudioHelper/audio.PNG";
@@ -19,8 +19,8 @@ public class AudioHelper {
 	
 	public static void addAudioThroughToolbar() throws FindFailed, InterruptedException, AWTException{				
 		AddHelper.addThroughToolbar(addAudioToolbar);
-		ObjectHelper.clickButton(AddHelper.addFileButton);	
-		ObjectHelper.openFile(audioFilePath, audioFile);			
+		clickButton(AddHelper.addFileButton);	
+		openFile(audioFilePath, audioFile);			
 	}
 
 }
