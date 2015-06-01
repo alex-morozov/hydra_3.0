@@ -18,9 +18,9 @@ public class EditImage extends TestBase{
 	@Test
 	public void changeImageSizeProportionally(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		EditHelper.openBookAndEditObject(ArticleHelper.editImageArticle,ImageHelper.image, ImageHelper.editWindowTabSize);
-		ImageHelper.changeImageSizeProportionally();		
+		ImageHelper.changeImageSizeProportionallyImageEditing();		
 		ObjectHelper.clickButton(ObjectHelper.ok);	
-		EditHelper.cancelObjectHighlighting();
+	    ObjectHelper.cancelHighlighting();
 		EditHelper.editObject(ImageHelper.imageWithChangedSize, ImageHelper.editWindowTabChangedSize);						
 	}
 	
@@ -30,7 +30,7 @@ public class EditImage extends TestBase{
 		EditHelper.openBookAndEditObject(ArticleHelper.editImageArticle,ImageHelper.image, ImageHelper.editWindowTabSize);
 		ImageHelper.changeImageSizeManually();		
 		ObjectHelper.clickButton(ObjectHelper.ok);	
-		EditHelper.cancelObjectHighlighting();
+		ObjectHelper.cancelHighlighting();
 		EditHelper.editObject(ImageHelper.imageWithChangedSize, ImageHelper.editWindowTabChangedSize);						
 	}
 	
@@ -41,7 +41,7 @@ public class EditImage extends TestBase{
 		ObjectHelper.clickButton(ImageHelper.tabText);			
 		ObjectHelper.changeFieldValue(ImageHelper.imageSignText, "ChangedSign");				
 		ObjectHelper.clickButton(ObjectHelper.ok);		
-		EditHelper.cancelObjectHighlighting();
+		 ObjectHelper.cancelHighlighting();
 		EditHelper.editObject(ImageHelper.imageWithChangedSignText , ImageHelper.editWindowTabSize);
 		ObjectHelper.clickButton(ImageHelper.tabText);
 		screen.wait(ImageHelper.editWindowTabChangedSignText);		
@@ -55,7 +55,7 @@ public class EditImage extends TestBase{
 		ObjectHelper.clickButton(AddHelper.addSubObjectRectangleButton);					
 		ObjectHelper.clickButton(ObjectHelper.cancel);		
 		ObjectHelper.clickButton(ObjectHelper.ok);	
-		EditHelper.cancelObjectHighlighting();
+		ObjectHelper.cancelHighlighting();
 		EditHelper.editObject(ImageHelper.image, ImageHelper.editWindowTabSize);		
 		ObjectHelper.clickButton(ImageHelper.tabAreas);
 		screen.wait(ImageHelper.editWindowTabAreas);						
@@ -75,7 +75,7 @@ public class EditImage extends TestBase{
 		ObjectHelper.clickButton(ObjectHelper.ok);
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.clickButton(ObjectHelper.ok);			
-		EditHelper.cancelObjectHighlighting();		
+		ObjectHelper.cancelHighlighting();
 		EditHelper.editObject(ImageHelper.image, ImageHelper.editWindowTabSize);		
 		ObjectHelper.clickButton(ImageHelper.tabAreas);
 		screen.wait(ImageHelper.imageAreaListElementEditImageWindow);					
@@ -93,7 +93,7 @@ public class EditImage extends TestBase{
 		ObjectHelper.clickButton(ObjectHelper.ok);
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.clickButton(ObjectHelper.ok);			
-		EditHelper.cancelObjectHighlighting();		
+		ObjectHelper.cancelHighlighting();	
 		EditHelper.editObject(ImageHelper.image, ImageHelper.editWindowTabSize);		
 		ObjectHelper.clickButton(ImageHelper.tabAreas);
 		screen.wait(ImageHelper.imageAreaListElementEditImageWindow);					
@@ -111,7 +111,7 @@ public class EditImage extends TestBase{
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.clickButton(ObjectHelper.ok);		
-		EditHelper.cancelObjectHighlighting();	
+		ObjectHelper.cancelHighlighting();	
 		EditHelper.editObject(ImageHelper.image, ImageHelper.editWindowTabSize);		
 		ObjectHelper.clickButton(ImageHelper.tabAreas);
 		ObjectHelper.clickButton(ImageHelper.imageAreaListElementEditImageWindow);
@@ -129,7 +129,7 @@ public class EditImage extends TestBase{
 		ImageHelper.editImageAreaCoordinates();				
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.clickButton(ObjectHelper.ok);		
-		EditHelper.cancelObjectHighlighting();	
+		ObjectHelper.cancelHighlighting();
 		EditHelper.editObject(ImageHelper.image, ImageHelper.editWindowTabSize);		
 		ObjectHelper.clickButton(ImageHelper.tabAreas);
 		ObjectHelper.clickButton(ImageHelper.imageAreaListElementEditImageWindow);
@@ -145,7 +145,7 @@ public class EditImage extends TestBase{
 		ObjectHelper.clickButton(ImageHelper.imageAreaListElementEditImageWindow);
 		ObjectHelper.clickButton(DeleteHelper.deleteSubObjectRectangleButton);		
 		ObjectHelper.clickButton(ObjectHelper.ok);		
-		EditHelper.cancelObjectHighlighting();	
+		ObjectHelper.cancelHighlighting();
 		EditHelper.editObject(ImageHelper.image, ImageHelper.editWindowTabSize);		
 		ObjectHelper.clickButton(ImageHelper.tabAreas);		
 		screen.wait(ImageHelper.imageAreaEmptyListElement);		
@@ -159,7 +159,7 @@ public class EditImage extends TestBase{
 		ObjectHelper.clickButton(ImageHelper.imageAreaListElementEditImageWindow);
 		ObjectHelper.clickButton(DeleteHelper.deleteSubObjectRectangleButton);		
 		ObjectHelper.clickButton(ObjectHelper.ok);		
-		EditHelper.cancelObjectHighlighting();	
+		ObjectHelper.cancelHighlighting();
 		EditHelper.editObject(ImageHelper.image, ImageHelper.editWindowTabSize);		
 		ObjectHelper.clickButton(ImageHelper.tabAreas);		
 		screen.wait(ImageHelper.imageAreaEmptyListElement);		
@@ -177,7 +177,7 @@ public class EditImage extends TestBase{
 		ObjectHelper.clickButton(ObjectHelper.ok);			
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		ObjectHelper.clickButton(ObjectHelper.ok);	
-		EditHelper.cancelObjectHighlighting();	
+		ObjectHelper.cancelHighlighting();
 		EditHelper.editObject(ImageHelper.image, ImageHelper.editWindowTabSize);		
 		ObjectHelper.clickButton(ImageHelper.tabAreas);
 		ObjectHelper.clickButton(ImageHelper.imageAreaListElementEditImageWindow);

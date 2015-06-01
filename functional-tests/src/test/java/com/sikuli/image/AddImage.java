@@ -52,7 +52,7 @@ public class AddImage extends TestBase{
 	@Test
 	public void changeImageSizeProportionally(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		ImageHelper.addImageThroughToolbar();
-		ImageHelper.changeImageSizeProportionally();			
+		ImageHelper.changeImageSizeProportionallyImageCreation();			
 		ObjectHelper.clickButton(ObjectHelper.ok);
 		EditHelper.editObject(ImageHelper.imageWithChangedSize, ImageHelper.editWindowTabChangedSize);	
 		ObjectHelper.finalCheck(ImageHelper.editWindowTabChangedSize);

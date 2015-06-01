@@ -28,7 +28,6 @@ public class EditTest extends TestBase {
 		ObjectHelper.cancel();		
 		ObjectHelper.finalCheck(CheckBoxTestHelper.checkBoxTestWithFourVariants);	    
 	}
-
 	
 	@Parameters({ "sikuli" })	
 	@Test
@@ -69,7 +68,7 @@ public class EditTest extends TestBase {
 	
 	@Parameters({ "sikuli" })	
 	@Test
-		public void addCorrectAnswerFreeAnswerTest(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		public void editCorrectAnswerFreeAnswerTest(String sikuli) throws FindFailed, InterruptedException, AWTException{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
 		ArticleHelper.openArticle(ArticleHelper.freeAnswerTestArticle);
 		TestHelper.editTest(FreeAnswerTestHelper.freeAnswerTestTytle);
@@ -119,6 +118,29 @@ public class EditTest extends TestBase {
 		TestHelper.editTest(CheckBoxTestHelper.checkBoxTestWithFourVariants);
 		ObjectHelper.clickButton(TestHelper.answersTab);
 		ObjectHelper.finalCheck(CheckBoxTestHelper.addCorrectVariantCheck);	    
+	}
+	
+	@Parameters({ "sikuli" })	
+	@Test
+		public void changeCorrectAnswerReorderingTest(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		BookHelper.openBook(BookManager.image, BookManager.openBook);
+		ArticleHelper.openArticle(ArticleHelper.reorderingTestArticle);
+		TestHelper.editTest(ReorderingTestHelper.reorderingTestWithFiveVariants);
+		ReorderingTestHelper.changeCorrectOrder();
+		ObjectHelper.confirm();		
+		ObjectHelper.cancelHighlighting();
+		TestHelper.editTest(ReorderingTestHelper.reorderingTestWithFiveVariants);
+		ObjectHelper.clickButton(TestHelper.answersTab);
+		ObjectHelper.finalCheck(ReorderingTestHelper.changeOrderCheck);	    
+	}
+	
+	@Parameters({ "sikuli" })	
+	@Test
+		public void changeVariantText(String sikuli) throws FindFailed, InterruptedException, AWTException{
+		BookHelper.openBook(BookManager.image, BookManager.openBook);
+		ArticleHelper.openArticle(ArticleHelper.checkBoxTestArticle);		
+		TestHelper.changeVariantText();	    
+		ObjectHelper.finalCheck(TestHelper.changedVariantText);	  
 	}
 	
 	

@@ -15,6 +15,7 @@
 	        <package name = "com.sikuli.link"></package>
 	        <package name = "com.sikuli.external.link"></package>
 	        <package name = "com.sikuli.table"></package>
+	        <package name = "com.sikuli.test"></package>
 	    </packages>
 	    	   	          
 		

@@ -35,7 +35,7 @@ public class EditPopUpImage extends TestBase{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
 		ArticleHelper.openArticle(ArticleHelper.textAndPopUpImageArticle);
 		PopUpObjectsHelper.editPopUpImage();
-		ImageHelper.changeImageSizeProportionally();			
+		ImageHelper.changeImageSizeProportionallyImageCreation();			
 		ObjectHelper.clickButton(ObjectHelper.ok);
 		PopUpObjectsHelper.editPopUpImage();
 		ObjectHelper.clickButton(ImageHelper.tabSize);

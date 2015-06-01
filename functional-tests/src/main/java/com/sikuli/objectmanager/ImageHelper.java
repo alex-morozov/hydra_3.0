@@ -107,9 +107,14 @@ public ImageHelper getImageHelper(){
 }
 
 
-public static void changeImageSizeProportionally() throws FindFailed, AWTException {
+public static void changeImageSizeProportionallyImageCreation() throws FindFailed, AWTException {
 	clickButton(tabSize);
 	clickButton(proportionalChangeButton);		
+	changeFieldValue(imageWidth, "700");	
+	clickButton(imageHeight);
+}
+
+public static void changeImageSizeProportionallyImageEditing() throws FindFailed, AWTException {		
 	changeFieldValue(imageWidth, "700");	
 	clickButton(imageHeight);
 }

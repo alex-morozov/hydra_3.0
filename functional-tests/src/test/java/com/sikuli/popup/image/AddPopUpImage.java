@@ -44,7 +44,7 @@ public class AddPopUpImage extends TestBase{
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
 		ArticleHelper.openArticle(ArticleHelper.addPopUpObjectArticle);
 		PopUpObjectsHelper.addPopUpImage(PopUpObjectsHelper.stringStart, PopUpObjectsHelper.stringFinish, PopUpObjectsHelper.highlightedText);
-		ImageHelper.changeImageSizeProportionally();			
+		ImageHelper.changeImageSizeProportionallyImageCreation();			
 		ObjectHelper.clickButton(ObjectHelper.ok);
 		PopUpObjectsHelper.editPopUpImage();
 		ObjectHelper.clickButton(ImageHelper.tabSize);

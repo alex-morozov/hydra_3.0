@@ -40,3 +40,5 @@
 1432748100665	Move member 'confirm'
 1432748140758	Extract method 'cancel'
 1432748158363	Move member 'cancel'
+1432809148778	Rename method 'changeImageSizeProportionally'
+1432891795530	Move file

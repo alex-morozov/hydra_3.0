@@ -22,8 +22,11 @@ public class TestHelper extends ObjectHelper{
 	public static String basicVariantsQuantity = "/inputScreens/TestHelper/basicVariantsQuantity.PNG";
 	public static String editTestWindowTitle = "/inputScreens/TestHelper/editTestWindowTitle.PNG";
 	public static String variantsField = "/inputScreens/TestHelper/variantsField.PNG";
-
+	public static String variantText = "/inputScreens/TestHelper/variantText.PNG";
+	public static String changedVariantText = "/inputScreens/TestHelper/changedVariantText.PNG";
 	public static String newVariant = "/inputScreens/TestHelper/RadioButtonTest/newVariant.PNG";
+	public static String dublicationCheck = "/inputScreens/TestHelper/RadioButtonTest/dublicationCheck.PNG";
+	
 	
 	public static void addTestWithVariantsThroughToolbar(String testType, String variant) throws FindFailed {
 		ArticleHelper.setCursor(ArticleHelper.emptyArticle);
@@ -39,6 +42,10 @@ public class TestHelper extends ObjectHelper{
 	public static void editTest(String test) throws FindFailed, InterruptedException, AWTException {
 		screen.mouseMove(test);
 		EditHelper.editObject(idTest, editTestWindowTitle);							
+	}
+
+	public static void changeVariantText() throws FindFailed {
+		typeFieldValue(variantText, "Hydra");		
 	}
 
 	

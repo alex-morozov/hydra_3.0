@@ -32,11 +32,8 @@ public EditHelper getEditHelper() {
 		BookHelper.openBook(BookManager.image, BookManager.openBook);
 		ArticleHelper.openArticle(article);
 		EditHelper.editObject(object, window);		
-		}
+		}	
 	
-	public static void cancelObjectHighlighting  (){
-		screen.rightClick();	
-	}
 
 
 

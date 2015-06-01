@@ -25,6 +25,7 @@ public class CheckBoxTestHelper extends TestHelper{
 	    clickButton(checkBoxTestType);	    
 	    TestHelper.changeNumberOfVariants(value); 
 	}
+	
 	public static void changeCorrectAnswer() throws FindFailed {
 		clickButton(TestHelper.answersTab);
 		clickButton(newVariant);

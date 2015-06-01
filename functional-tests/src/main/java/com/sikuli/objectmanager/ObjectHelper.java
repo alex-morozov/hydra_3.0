@@ -23,6 +23,7 @@ public class ObjectHelper {
 	public static String emptySpace = "/inputScreens/ObjectHelper/emptySpace.PNG";
 	public static String up = "/inputScreens/ObjectHelper/up.PNG";
 	public static String down = "/inputScreens/ObjectHelper/down.PNG";
+	public static String undoDublicationOrRelocationCheck = "/inputScreens/ObjectHelper/undoDublicationOrRelocationCheck.PNG";
 	
 	public static void clickButton(String button) throws FindFailed	{
 	screen.wait(button);
