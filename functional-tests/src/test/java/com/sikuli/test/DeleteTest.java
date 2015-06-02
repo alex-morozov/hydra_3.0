@@ -20,8 +20,8 @@ public class DeleteTest extends TestBase {
 	@Parameters({ "sikuli" })
 	@Test
 	public void deleteTestThroughContextMenu (String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.checkBoxTestArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.checkBoxTest);
 		DeleteHelper.deleteThroughId(CheckBoxTestHelper.checkBoxTestWithFourVariants, TestHelper.idTest);
 		ObjectHelper.finalCheck(ObjectHelper.deletionCheck);
 	}

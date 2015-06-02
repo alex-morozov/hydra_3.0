@@ -18,8 +18,8 @@ public class DeleteTable extends TestBase {
 	@Parameters({ "sikuli" })
 	@Test
 	public void deleteTableThroughContextMenu (String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.table);	
 		DeleteHelper.deleteThroughId(table, idTable);
 		ObjectHelper.finalCheck(ObjectHelper.deletionCheck);
 	}

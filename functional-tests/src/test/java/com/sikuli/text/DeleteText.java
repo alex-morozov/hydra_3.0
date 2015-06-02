@@ -17,9 +17,9 @@ public class DeleteText extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void deleteText(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.text);
 		ObjectHelper.highlightAndDeleteAllContent(TextHelper.textCheck);			
-		ObjectHelper.finalCheck(ArticleHelper.emptyArticle);
+		ObjectHelper.finalCheck(ArticleHelper.empty);
 	}
 }

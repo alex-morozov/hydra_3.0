@@ -18,9 +18,9 @@ public class StylePanel extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void editFontName(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
+		ArticleHelper.setCursor(ArticleHelper.empty);	
 		ObjectHelper.clickButton(TextHelper.showStylePanel);
 		TextHelper.editStyleFromPanel();
 		TextHelper.changeFont();
@@ -32,9 +32,9 @@ public class StylePanel extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void makeFontBold(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
+		ArticleHelper.setCursor(ArticleHelper.empty);	
 		ObjectHelper.clickButton(TextHelper.showStylePanel);
 		TextHelper.editStyleFromPanel();
 		TextHelper.changeFont();
@@ -47,9 +47,9 @@ public class StylePanel extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void makeFontItalic(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
+		ArticleHelper.setCursor(ArticleHelper.empty);	
 		ObjectHelper.clickButton(TextHelper.showStylePanel);
 		TextHelper.editStyleFromPanel();		
 		ObjectHelper.clickButton(TextHelper.italic);		
@@ -61,9 +61,9 @@ public class StylePanel extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void makeFontUnderlined(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
+		ArticleHelper.setCursor(ArticleHelper.empty);	
 		ObjectHelper.clickButton(TextHelper.showStylePanel);
 		TextHelper.editStyleFromPanel();		
 		ObjectHelper.clickButton(TextHelper.underline);		
@@ -75,9 +75,9 @@ public class StylePanel extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void addUpperIndex(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
+		ArticleHelper.setCursor(ArticleHelper.empty);	
 		ObjectHelper.clickButton(TextHelper.showStylePanel);
 		TextHelper.editStyleFromPanel();		
 		ObjectHelper.clickButton(TextHelper.upperIndex);		
@@ -89,9 +89,9 @@ public class StylePanel extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void addLowerIndex(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
+		ArticleHelper.setCursor(ArticleHelper.empty);	
 		ObjectHelper.clickButton(TextHelper.showStylePanel);
 		TextHelper.editStyleFromPanel();		
 		ObjectHelper.clickButton(TextHelper.lowerIndex);		
@@ -103,9 +103,9 @@ public class StylePanel extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void changeFontColour(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
+		ArticleHelper.setCursor(ArticleHelper.empty);	
 		ObjectHelper.clickButton(TextHelper.showStylePanel);
 		TextHelper.editStyleFromPanel();		
 		TextHelper.changeFontColor();
@@ -119,9 +119,9 @@ public class StylePanel extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void changeBackgroundColour(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
+		ArticleHelper.setCursor(ArticleHelper.empty);	
 		ObjectHelper.clickButton(TextHelper.showStylePanel);
 		TextHelper.editStyleFromPanel();		
 		TextHelper.changeBackgroundColour();
@@ -134,9 +134,9 @@ public class StylePanel extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void makeSizeRelative(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
+		ArticleHelper.setCursor(ArticleHelper.empty);	
 		ObjectHelper.clickButton(TextHelper.showStylePanel);
 		TextHelper.editStyleFromPanel();		
 		ObjectHelper.clickButton(TextHelper.relativeSizeUnchecked);		
@@ -148,9 +148,9 @@ public class StylePanel extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void changeRelativeSize(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
+		ArticleHelper.setCursor(ArticleHelper.empty);	
 		ObjectHelper.clickButton(TextHelper.showStylePanel);
 		TextHelper.editStyleFromPanel();		
 		ObjectHelper.clickButton(TextHelper.relativeSizeUnchecked);
@@ -163,9 +163,9 @@ public class StylePanel extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void changeAbsoluteSize(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
+		ArticleHelper.setCursor(ArticleHelper.empty);	
 		ObjectHelper.clickButton(TextHelper.showStylePanel);
 		TextHelper.editStyleFromPanel();		
 		TextHelper.changeAbsoluteSize();		
@@ -177,9 +177,9 @@ public class StylePanel extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void changeLanguage(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
+		ArticleHelper.setCursor(ArticleHelper.empty);	
 		ObjectHelper.clickButton(TextHelper.showStylePanel);
 		TextHelper.editStyleFromPanel();		
 		TextHelper.changeLanguage();	
@@ -191,9 +191,9 @@ public class StylePanel extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void createStyle(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
+		ArticleHelper.setCursor(ArticleHelper.empty);	
 		ObjectHelper.clickButton(TextHelper.showStylePanel);
 		TextHelper.createStyleFromPanel();
 		TextHelper.createStyleName();
@@ -206,9 +206,9 @@ public class StylePanel extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void dublicateStyle(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
+		ArticleHelper.setCursor(ArticleHelper.empty);	
 		ObjectHelper.clickButton(TextHelper.showStylePanel);
 		TextHelper.dublicateStyleFromPanel();
 		TextHelper.createStyleName();
@@ -221,8 +221,8 @@ public class StylePanel extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void editTextThroughStylePanel(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textArticle);		
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.text);		
 		ObjectHelper.highlightAllContent(TextHelper.textCheck);
 		ObjectHelper.clickButton(TextHelper.showStylePanel);
 		ObjectHelper.clickButton(TextHelper.styleToEditText);		
@@ -232,9 +232,9 @@ public class StylePanel extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void cancelCreateStyle(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
+		ArticleHelper.setCursor(ArticleHelper.empty);	
 		ObjectHelper.clickButton(TextHelper.showStylePanel);
 		TextHelper.createStyleFromPanel();		
 		ObjectHelper.clickButton(ObjectHelper.cancel);		
@@ -244,9 +244,9 @@ public class StylePanel extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void cancelEditStyle(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
+		ArticleHelper.setCursor(ArticleHelper.empty);	
 		ObjectHelper.clickButton(TextHelper.showStylePanel);
 		TextHelper.editStyleFromPanel();		
 		ObjectHelper.clickButton(ObjectHelper.cancel);		
@@ -256,9 +256,9 @@ public class StylePanel extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void cancelDublicateStyle(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
+		ArticleHelper.setCursor(ArticleHelper.empty);	
 		ObjectHelper.clickButton(TextHelper.showStylePanel);
 		TextHelper.dublicateStyleFromPanel();		
 		ObjectHelper.clickButton(ObjectHelper.cancel);		

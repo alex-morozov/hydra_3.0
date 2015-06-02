@@ -17,8 +17,8 @@ public class RelocateText extends TestBase{
 	@Parameters({ "sikuli" })
 	@Test
 	public void relocateText(String sikuli) throws FindFailed, InterruptedException, AWTException{		
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.textAndImage);
 		RelocateHelper.relocateText(TextHelper.stringStart, TextHelper.stringFinish, TextHelper.highlightedString, TextHelper.textRelocationFinish);
 		ObjectHelper.finalCheck(TextHelper.relocationCheck);				
 	}

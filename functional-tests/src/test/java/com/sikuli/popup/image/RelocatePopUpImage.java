@@ -20,8 +20,8 @@ public class RelocatePopUpImage extends TestBase {
 	@Parameters({ "sikuli" })
 	@Test
 	public void relocatePopUpImage(String sikuli) throws FindFailed, InterruptedException, AWTException{		
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndPopUpImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.textAndPopUpImage);
 		RelocateHelper.relocateObject(PopUpObjectsHelper.highlightedText, PopUpObjectsHelper.idPopUpImage, AudioHelper.textString);
 		ObjectHelper.finalCheck(PopUpObjectsHelper.relocationCheck);			
 	}

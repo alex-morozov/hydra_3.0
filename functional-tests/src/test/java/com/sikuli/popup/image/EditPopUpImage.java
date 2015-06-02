@@ -19,8 +19,8 @@ public class EditPopUpImage extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void editPopUpImageChangeImageSize(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndPopUpImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.textAndPopUpImage);
 		PopUpObjectsHelper.editPopUpImage();
 		ImageHelper.changeImageSizeManually();			
 		ObjectHelper.clickButton(ObjectHelper.ok);
@@ -32,8 +32,8 @@ public class EditPopUpImage extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void editPopUpImageChangeImageSizeProportionally(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndPopUpImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.textAndPopUpImage);
 		PopUpObjectsHelper.editPopUpImage();
 		ImageHelper.changeImageSizeProportionallyImageCreation();			
 		ObjectHelper.clickButton(ObjectHelper.ok);
@@ -45,8 +45,8 @@ public class EditPopUpImage extends TestBase{
 	@Parameters({ "sikuli" })
 	@Test
 	public void changeImageFile(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndPopUpImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.textAndPopUpImage);
 		PopUpObjectsHelper.editPopUpImage();
 		ImageHelper.changeImageFile(AddHelper.addFileButton);		
 		ObjectHelper.clickButton(ObjectHelper.ok);	
@@ -57,8 +57,8 @@ public class EditPopUpImage extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void cancelEditPopUpImage(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndPopUpImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.textAndPopUpImage);
 		PopUpObjectsHelper.editPopUpImage();
 		ObjectHelper.clickButton(ObjectHelper.cancel);
 		screen.mouseMove(PopUpObjectsHelper.highlightedText);

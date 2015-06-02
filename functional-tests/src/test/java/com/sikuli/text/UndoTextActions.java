@@ -24,8 +24,8 @@ public class UndoTextActions extends TestBase  {
 	@Parameters({ "sikuli" })	
 	@Test
 		public void undoAddingTextThroughContextMenu(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndImageArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.textAndImage);	
 		AddHelper.addThroughContextMenu(TextHelper.stringStart, AddHelper.addText);	  
 		screen.paste("Пример текста");
 		ObjectHelper.confirmAction();
@@ -36,8 +36,8 @@ public class UndoTextActions extends TestBase  {
 	@Parameters({ "sikuli" })	
 	@Test
 		public void undoAddingTextDirectly(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.textAndImage);
 		ArticleHelper.setCursor(TextHelper.stringStart);			  
 		screen.paste("П");	
 		UndoRedoHelper.undoAction();
@@ -47,8 +47,8 @@ public class UndoTextActions extends TestBase  {
 	@Parameters({ "sikuli" })
 	@Test
 	public void undoCopyPasteFormattedText(String sikuli) throws FindFailed, InterruptedException, AWTException{		
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.textAndImage);
 		CopyPasteHelper.copyPasteFormattedText(TextHelper.stringStart, TextHelper.stringFinish, TextHelper.textRelocationFinish);	
 		UndoRedoHelper.undoAction();
 		ObjectHelper.finalCheck(ImageHelper.undoRelocationCheck);			
@@ -57,8 +57,8 @@ public class UndoTextActions extends TestBase  {
 	@Parameters({ "sikuli" })	
 	@Test
 		public void undoTextDeletion(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.text);
 		ObjectHelper.highlightAndDeleteAllContent(TextHelper.textCheck);			
 		UndoRedoHelper.undoAction();
 		ObjectHelper.finalCheck(TextHelper.textCheck);
@@ -67,8 +67,8 @@ public class UndoTextActions extends TestBase  {
 	@Parameters({ "sikuli" })
 	@Test
 	public void undoTextDublication(String sikuli) throws FindFailed, InterruptedException, AWTException{		
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.textAndImage);
 		DublicateHelper.dublicateText(TextHelper.stringStart, TextHelper.stringFinish, TextHelper.highlightedString, TextHelper.textRelocationFinish);		
 		UndoRedoHelper.undoAction();
 		ObjectHelper.finalCheck(ImageHelper.undoRelocationCheck);					
@@ -77,8 +77,8 @@ public class UndoTextActions extends TestBase  {
 	@Parameters({ "sikuli" })
 	@Test
 	public void undoTextRelocation(String sikuli) throws FindFailed, InterruptedException, AWTException{		
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.textAndImage);
 		RelocateHelper.relocateText(TextHelper.stringStart, TextHelper.stringFinish, TextHelper.highlightedString, TextHelper.textRelocationFinish);
 		UndoRedoHelper.undoAction();
 		ObjectHelper.finalCheck(ImageHelper.undoRelocationCheck);					
@@ -87,8 +87,8 @@ public class UndoTextActions extends TestBase  {
 	@Parameters({ "sikuli" })	
 	@Test
 		public void undoEditingTextThroughContextMenu(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textArticle);			
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.text);			
 		ObjectHelper.openContextMenu(TextHelper.textCheck);
 		ObjectHelper.clickButton(EditHelper.editObjectButton);
 		ObjectHelper.clickButton(TextHelper.styleFromContextMenu);

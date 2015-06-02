@@ -22,8 +22,8 @@ public class RedoTableActions extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void redoAddTableThroughToolbar(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);	
 		TableHelper.addTableThroughToolbar();
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		UndoRedoHelper.undoRedoAction();
@@ -33,8 +33,8 @@ public class RedoTableActions extends TestBase{
 	@Parameters({ "sikuli" })
 	@Test
 	public void redoDeleteTableThroughContextMenu (String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.table);	
 		DeleteHelper.deleteThroughId(table, idTable);
 		UndoRedoHelper.undoRedoAction();
 		ObjectHelper.finalCheck(ObjectHelper.deletionCheck);
@@ -43,8 +43,8 @@ public class RedoTableActions extends TestBase{
 	@Parameters({ "sikuli" })
 	@Test
 	public void redoDublicateTable(String sikuli) throws FindFailed, InterruptedException, AWTException{		
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndTableArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.textAndTable);
 		DublicateHelper.dublicateObject(bigTable, idTable, AudioHelper.textString);
 		UndoRedoHelper.undoRedoAction();
 		ObjectHelper.finalCheck(tableDublicationCheck);			
@@ -53,8 +53,8 @@ public class RedoTableActions extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void redoEditTableChangeBackgroundColourForAllCells(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.table);	
 		editTable(table);	
 		changeBackgroundColourAndConfirm(allTableCellStyle);		
 		ObjectHelper.clickButton(ObjectHelper.ok);
@@ -65,8 +65,8 @@ public class RedoTableActions extends TestBase{
 	@Parameters({ "sikuli" })
 	@Test
 	public void redoRelocateTable(String sikuli) throws FindFailed, InterruptedException, AWTException{		
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndTableArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.textAndTable);
 		RelocateHelper.relocateObject(bigTable, idTable, AudioHelper.textString);
 		UndoRedoHelper.undoRedoAction();
 		ObjectHelper.finalCheck(tableRelocationCheck);			

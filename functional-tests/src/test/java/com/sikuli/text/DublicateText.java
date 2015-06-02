@@ -18,8 +18,8 @@ public class DublicateText extends TestBase {
 	@Parameters({ "sikuli" })
 	@Test
 	public void dublicateText(String sikuli) throws FindFailed, InterruptedException, AWTException{		
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.textAndImage);
 		DublicateHelper.dublicateText(TextHelper.stringStart, TextHelper.stringFinish, TextHelper.highlightedString, TextHelper.textRelocationFinish);		
 		ObjectHelper.finalCheck(TextHelper.dublicationCheck);	
 		ObjectHelper.finalCheck(TextHelper.relocationCheck);				

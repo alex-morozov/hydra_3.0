@@ -19,8 +19,8 @@ public class AddTest extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void addFreeAnswerTestThroughToolbar(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
 		FreeAnswerTestHelper.addFreeAnswerTestThroughToolbar();	
 		screen.mouseMove(FreeAnswerTestHelper.freeAnswerTestTytle);
 		ObjectHelper.finalCheck(TestHelper.idTest);	    
@@ -29,8 +29,8 @@ public class AddTest extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void addTestWithTwoVariantsThroughToolbar(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
 		TestHelper.addTestWithVariantsThroughToolbar(ReorderingTestHelper.reorderingTestType, TestHelper.twoVariants);	
 		screen.mouseMove(ReorderingTestHelper.reorderingTestWithTwoVariants);
 		ObjectHelper.finalCheck(TestHelper.idTest);	    
@@ -39,8 +39,8 @@ public class AddTest extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void addRadioButtonTestWithThreeVariantsThroughContextMenu(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
 		RadioButtonTestHelper.addTestThroughContextMenu();	
 		ObjectHelper.clickButton(ObjectHelper.ok);
 		screen.mouseMove(RadioButtonTestHelper.testWithThreeVariants);
@@ -50,8 +50,8 @@ public class AddTest extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void addCheckBoxTestWithFourVariantsThroughContextMenu(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
 		CheckBoxTestHelper.addCheckBoxTestThroughContextMenu("4");	
 		ObjectHelper.clickButton(ObjectHelper.ok);
 		screen.mouseMove(CheckBoxTestHelper.checkBoxTestWithFourVariants);
@@ -61,8 +61,8 @@ public class AddTest extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void addFreeAnswerTestThroughContextMenu(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
 		FreeAnswerTestHelper.addFreeAnswerTestThroughContextMenu();	
 		ObjectHelper.clickButton(ObjectHelper.ok);
 		screen.mouseMove(FreeAnswerTestHelper.freeAnswerTestTytle);
@@ -72,8 +72,8 @@ public class AddTest extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void addReorderingTestWithFiveVariantsThroughContextMenu(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
 		ReorderingTestHelper.addReorderingTestThroughContextMenu("5");	
 		ObjectHelper.clickButton(ObjectHelper.ok);
 		screen.mouseMove(ReorderingTestHelper.reorderingTestWithFiveVariants);
@@ -83,11 +83,11 @@ public class AddTest extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void cancelAddTestThroughContextMenu(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
 		RadioButtonTestHelper.addTestThroughContextMenu();	
 		ObjectHelper.clickButton(ObjectHelper.cancel);		
-		ObjectHelper.finalCheck(ArticleHelper.emptyArticle);	    
+		ObjectHelper.finalCheck(ArticleHelper.empty);	    
 	}	
 
 }

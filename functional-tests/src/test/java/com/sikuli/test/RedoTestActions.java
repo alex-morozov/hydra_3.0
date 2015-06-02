@@ -25,8 +25,8 @@ public class RedoTestActions extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void redoAddTestWithTwoVariantsThroughToolbar(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
 		TestHelper.addTestWithVariantsThroughToolbar(ReorderingTestHelper.reorderingTestType, TestHelper.twoVariants);	
 		UndoRedoHelper.undoRedoAction();
 		screen.mouseMove(ReorderingTestHelper.reorderingTestWithTwoVariants);
@@ -36,8 +36,8 @@ public class RedoTestActions extends TestBase{
 	@Parameters({ "sikuli" })
 	@Test
 	public void redoDeleteTestThroughContextMenu (String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.checkBoxTestArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.checkBoxTest);
 		DeleteHelper.deleteThroughId(CheckBoxTestHelper.checkBoxTestWithFourVariants, TestHelper.idTest);
 		UndoRedoHelper.undoRedoAction();
 		ObjectHelper.finalCheck(ObjectHelper.deletionCheck);
@@ -46,8 +46,8 @@ public class RedoTestActions extends TestBase{
 	@Parameters({ "sikuli" })
 	@Test
 	public void redoDublicateTest(String sikuli) throws FindFailed, InterruptedException, AWTException{		
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.checkBoxTestArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.checkBoxTest);
 		DublicateHelper.dublicateObject(CheckBoxTestHelper.checkBoxTestWithFourVariants, TestHelper.idTest, AudioHelper.textString);
 		UndoRedoHelper.undoRedoAction();
 		ObjectHelper.finalCheck(TestHelper.dublicationCheck);			
@@ -58,8 +58,8 @@ public class RedoTestActions extends TestBase{
 	@Parameters({ "sikuli" })
 	@Test
 	public void redoRelocateTest(String sikuli) throws FindFailed, InterruptedException, AWTException{		
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.checkBoxTestArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.checkBoxTest);
 		RelocateHelper.relocateObject(CheckBoxTestHelper.checkBoxTestWithFourVariants, TestHelper.idTest, AudioHelper.textString);
 		ObjectHelper.cancelHighlighting();
 		UndoRedoHelper.undoRedoAction();

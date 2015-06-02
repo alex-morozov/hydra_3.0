@@ -23,10 +23,10 @@ public class RedoTextActions extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void redoAddingTextThroughContextMenu(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
-		AddHelper.addThroughContextMenu(ArticleHelper.emptyArticle, AddHelper.addText);	  
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
+		ArticleHelper.setCursor(ArticleHelper.empty);	
+		AddHelper.addThroughContextMenu(ArticleHelper.empty, AddHelper.addText);	  
 		screen.paste("Пример текста");
 		ObjectHelper.confirmAction();
 		UndoRedoHelper.undoRedoAction();
@@ -36,9 +36,9 @@ public class RedoTextActions extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void redoAddTextDirectly(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);			  
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
+		ArticleHelper.setCursor(ArticleHelper.empty);			  
 		screen.paste("Пример текста");	
 		UndoRedoHelper.undoRedoAction();
 		ObjectHelper.finalCheck(TextHelper.textCheck);
@@ -47,8 +47,8 @@ public class RedoTextActions extends TestBase{
 	@Parameters({ "sikuli" })
 	@Test
 	    public void redoCopyPasteFormattedText(String sikuli) throws FindFailed, InterruptedException, AWTException{		
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.textAndImage);
 		CopyPasteHelper.copyPasteFormattedText(TextHelper.stringStart, TextHelper.stringFinish, TextHelper.textRelocationFinish);		
 		UndoRedoHelper.undoRedoAction();
 		ObjectHelper.finalCheck(TextHelper.dublicationCheck);	
@@ -58,8 +58,8 @@ public class RedoTextActions extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void redoTextDeletion(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.text);
 		ObjectHelper.highlightAndDeleteAllContent(TextHelper.textCheck);
 		UndoRedoHelper.undoRedoAction();
 		TextHelper.textCheck.isEmpty();
@@ -68,8 +68,8 @@ public class RedoTextActions extends TestBase{
 	@Parameters({ "sikuli" })
 	@Test
 	    public void redoTextDublication(String sikuli) throws FindFailed, InterruptedException, AWTException{		
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.textAndImage);
 		DublicateHelper.dublicateText(TextHelper.stringStart, TextHelper.stringFinish, TextHelper.highlightedString, TextHelper.textRelocationFinish);	
 		UndoRedoHelper.undoRedoAction();
 		ObjectHelper.finalCheck(TextHelper.dublicationCheck);	
@@ -79,8 +79,8 @@ public class RedoTextActions extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void redoTextEditionThroughContextMenu(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textArticle);			
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.text);			
 		ObjectHelper.openContextMenu(TextHelper.textCheck);
 		ObjectHelper.clickButton(EditHelper.editObjectButton);
 		ObjectHelper.clickButton(TextHelper.styleFromContextMenu);
@@ -92,8 +92,8 @@ public class RedoTextActions extends TestBase{
 	@Parameters({ "sikuli" })
 	@Test
 	public void redoTextRelocation(String sikuli) throws FindFailed, InterruptedException, AWTException{		
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.textAndImage);
 		RelocateHelper.relocateText(TextHelper.stringStart, TextHelper.stringFinish, TextHelper.highlightedString, TextHelper.textRelocationFinish);
 		UndoRedoHelper.undoRedoAction();
 		ObjectHelper.finalCheck(TextHelper.relocationCheck);				

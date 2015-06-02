@@ -17,8 +17,8 @@ public class RelocateTable extends TestBase {
 	@Parameters({ "sikuli" })
 	@Test
 	public void relocateTable(String sikuli) throws FindFailed, InterruptedException, AWTException{		
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndTableArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.textAndTable);
 		RelocateHelper.relocateObject(bigTable, idTable, AudioHelper.textString);
 		ObjectHelper.finalCheck(tableRelocationCheck);			
 	}

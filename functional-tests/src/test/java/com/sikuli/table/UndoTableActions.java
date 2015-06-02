@@ -21,8 +21,8 @@ public class UndoTableActions extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void undoAddTableThroughToolbar(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);	
 		TableHelper.addTableThroughToolbar();
 		ObjectHelper.clickButton(ObjectHelper.ok);	
 		UndoRedoHelper.undoAction();
@@ -32,8 +32,8 @@ public class UndoTableActions extends TestBase{
 	@Parameters({ "sikuli" })
 	@Test
 	public void undoDeleteTableThroughContextMenu (String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.table);	
 		DeleteHelper.deleteThroughId(table, idTable);
 		UndoRedoHelper.undoAction();
 		ObjectHelper.finalCheck(table);
@@ -42,8 +42,8 @@ public class UndoTableActions extends TestBase{
 	@Parameters({ "sikuli" })
 	@Test
 	public void undoDublicateTable(String sikuli) throws FindFailed, InterruptedException, AWTException{		
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndTableArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.textAndTable);
 		DublicateHelper.dublicateObject(bigTable, idTable, AudioHelper.textString);
 		UndoRedoHelper.undoAction();
 		ObjectHelper.finalCheck(undoTableRelocationOrDublicationCheck);			
@@ -52,8 +52,8 @@ public class UndoTableActions extends TestBase{
 	@Parameters({ "sikuli" })
 	@Test
 	public void undoRelocateTable(String sikuli) throws FindFailed, InterruptedException, AWTException{		
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndTableArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.textAndTable);
 		RelocateHelper.relocateObject(bigTable, idTable, AudioHelper.textString);
 		UndoRedoHelper.undoAction();
 		ObjectHelper.finalCheck(undoTableRelocationOrDublicationCheck);			
@@ -62,8 +62,8 @@ public class UndoTableActions extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void undoEditTableAddRow(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.tableArticle);	
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.table);	
 		editTable(table);	
 		addCells(rowCellStyle);		
 		ObjectHelper.clickButton(ObjectHelper.ok);	

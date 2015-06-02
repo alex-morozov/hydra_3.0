@@ -20,8 +20,8 @@ public class RelocateTest extends TestBase {
 	@Parameters({ "sikuli" })
 	@Test
 	public void relocateTest(String sikuli) throws FindFailed, InterruptedException, AWTException{		
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.checkBoxTestArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.checkBoxTest);
 		RelocateHelper.relocateObject(CheckBoxTestHelper.checkBoxTestWithFourVariants, TestHelper.idTest, AudioHelper.textString);
 		ObjectHelper.cancelHighlighting();
 		ObjectHelper.finalCheck(TestHelper.dublicationCheck);

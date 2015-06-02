@@ -18,8 +18,8 @@ public class EditText extends TestBase {
 	@Parameters({ "sikuli" })	
 	@Test
 		public void editTextThroughContextMenu(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textArticle);			
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.text);			
 		ObjectHelper.openContextMenu(TextHelper.textCheck);
 		ObjectHelper.clickButton(EditHelper.editObjectButton);
 		ObjectHelper.clickButton(TextHelper.styleFromContextMenu);
@@ -30,8 +30,8 @@ public class EditText extends TestBase {
 	@Parameters({ "sikuli" })	
 	@Test
 		public void formatPainter(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.formattedTextAndImageArticle);			
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.formattedTextAndImage);			
 		TextHelper.useFormatPainter(TextHelper.formattedStringFinish, TextHelper.formatPainterUse);
 		ObjectHelper.finalCheck(TextHelper.formatPainterCheck);
 	}	

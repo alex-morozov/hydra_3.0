@@ -23,8 +23,8 @@ public class RedoPopUpImageActions extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void redoAddPopUpImage(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addPopUpObjectArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addPopUpObject);
 		PopUpObjectsHelper.addPopUpImage(PopUpObjectsHelper.stringStart, PopUpObjectsHelper.stringFinish, PopUpObjectsHelper.highlightedText);
 		ObjectHelper.clickButton(ObjectHelper.ok);
 		UndoRedoHelper.undoRedoAction();
@@ -35,7 +35,7 @@ public class RedoPopUpImageActions extends TestBase{
 	@Parameters({ "sikuli" })
 	@Test
 	public void undoDeletePopUpImageThroughContextMenu (String sikuli) throws FindFailed, InterruptedException, AWTException{
-		DeleteHelper.deleteThroughContextMenu(ArticleHelper.textAndPopUpImageArticle,PopUpObjectsHelper.popUpObjectText);
+		DeleteHelper.deleteThroughContextMenu(ArticleHelper.textAndPopUpImage,PopUpObjectsHelper.popUpObjectText);
 		UndoRedoHelper.undoRedoAction();
 		ObjectHelper.finalCheck(ObjectHelper.deletionCheck);
 	}
@@ -43,8 +43,8 @@ public class RedoPopUpImageActions extends TestBase{
 	@Parameters({ "sikuli" })
 	@Test
 	public void undoDublicatePopUpImage(String sikuli) throws FindFailed, InterruptedException, AWTException{		
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndPopUpImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.textAndPopUpImage);
 		DublicateHelper.dublicateObject(PopUpObjectsHelper.highlightedText, PopUpObjectsHelper.idPopUpImage, AudioHelper.textString);
 		UndoRedoHelper.undoRedoAction();
 		ObjectHelper.finalCheck(PopUpObjectsHelper.dublicationCheck);			
@@ -53,8 +53,8 @@ public class RedoPopUpImageActions extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void undoEditPopUpImageChangeImageSize(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndPopUpImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.textAndPopUpImage);
 		PopUpObjectsHelper.editPopUpImage();
 		ImageHelper.changeImageSizeManually();			
 		ObjectHelper.clickButton(ObjectHelper.ok);
@@ -67,8 +67,8 @@ public class RedoPopUpImageActions extends TestBase{
 	@Parameters({ "sikuli" })
 	@Test
 	public void undoRelocatePopUpImage(String sikuli) throws FindFailed, InterruptedException, AWTException{		
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.textAndPopUpImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.textAndPopUpImage);
 		RelocateHelper.relocateObject(PopUpObjectsHelper.highlightedText, PopUpObjectsHelper.idPopUpImage, AudioHelper.textString);
 		UndoRedoHelper.undoRedoAction();
 		ObjectHelper.finalCheck(PopUpObjectsHelper.relocationCheck);			

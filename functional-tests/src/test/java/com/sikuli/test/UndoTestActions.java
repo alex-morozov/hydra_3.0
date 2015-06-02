@@ -25,8 +25,8 @@ public class UndoTestActions extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void undoAddFreeAnswerTestThroughToolbar(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
 		FreeAnswerTestHelper.addFreeAnswerTestThroughToolbar();	
 		UndoRedoHelper.undoAction();
 		ObjectHelper.finalCheck(ObjectHelper.deletionCheck);     
@@ -35,8 +35,8 @@ public class UndoTestActions extends TestBase{
 	@Parameters({ "sikuli" })
 	@Test
 	public void undoDeleteTestThroughContextMenu (String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.checkBoxTestArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.checkBoxTest);
 		DeleteHelper.deleteThroughId(CheckBoxTestHelper.checkBoxTestWithFourVariants, TestHelper.idTest);
 		UndoRedoHelper.undoAction();
 		ObjectHelper.finalCheck(CheckBoxTestHelper.checkBoxTestWithFourVariants);
@@ -45,8 +45,8 @@ public class UndoTestActions extends TestBase{
 	@Parameters({ "sikuli" })
 	@Test
 	public void undoDublicateTest(String sikuli) throws FindFailed, InterruptedException, AWTException{		
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.checkBoxTestArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.checkBoxTest);
 		DublicateHelper.dublicateObject(CheckBoxTestHelper.checkBoxTestWithFourVariants, TestHelper.idTest, AudioHelper.textString);
 		UndoRedoHelper.undoAction();
 		ObjectHelper.finalCheck(ObjectHelper.undoDublicationOrRelocationCheck);			
@@ -55,8 +55,8 @@ public class UndoTestActions extends TestBase{
 	@Parameters({ "sikuli" })
 	@Test
 	public void undoRelocateTest(String sikuli) throws FindFailed, InterruptedException, AWTException{		
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.checkBoxTestArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.checkBoxTest);
 		RelocateHelper.relocateObject(CheckBoxTestHelper.checkBoxTestWithFourVariants, TestHelper.idTest, AudioHelper.textString);
 		UndoRedoHelper.undoAction();
 		ObjectHelper.finalCheck(ObjectHelper.undoDublicationOrRelocationCheck);			
@@ -65,8 +65,8 @@ public class UndoTestActions extends TestBase{
 	@Parameters({ "sikuli" })	
 	@Test
 		public void undoChangeNumberOfVariantsRadioButtonTest(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.radioButtonTestArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.radioButtonTest);
 		TestHelper.editTest(RadioButtonTestHelper.testWithThreeVariants);
 		TestHelper.changeNumberOfVariants("4");
 		ObjectHelper.confirm();

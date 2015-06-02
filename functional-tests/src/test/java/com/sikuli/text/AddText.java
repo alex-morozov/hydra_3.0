@@ -20,10 +20,10 @@ public class AddText extends TestBase {
 	@Parameters({ "sikuli" })	
 	@Test
 		public void addTextThroughContextMenu(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
-		AddHelper.addThroughContextMenu(ArticleHelper.emptyArticle, AddHelper.addText);	  
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
+		ArticleHelper.setCursor(ArticleHelper.empty);	
+		AddHelper.addThroughContextMenu(ArticleHelper.empty, AddHelper.addText);	  
 		screen.paste("Пример текста");
 		ObjectHelper.confirmAction();
 		ObjectHelper.finalCheck(TextHelper.textCheck);
@@ -32,9 +32,9 @@ public class AddText extends TestBase {
 	@Parameters({ "sikuli" })	
 	@Test
 		public void addTextDirectly(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);			  
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
+		ArticleHelper.setCursor(ArticleHelper.empty);			  
 		screen.paste("Пример текста");		
 		ObjectHelper.finalCheck(TextHelper.textCheck);
 	}
@@ -42,10 +42,10 @@ public class AddText extends TestBase {
 	@Parameters({ "sikuli" })	
 	@Test
 		public void editStyle(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
-		AddHelper.addThroughContextMenu(ArticleHelper.emptyArticle, AddHelper.addText);	  
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
+		ArticleHelper.setCursor(ArticleHelper.empty);	
+		AddHelper.addThroughContextMenu(ArticleHelper.empty, AddHelper.addText);	  
 		screen.paste("Пример текста");
 		ObjectHelper.clickButton(EditHelper.editSubObjectPencilButton);
 		TextHelper.changeAbsoluteSize();
@@ -58,10 +58,10 @@ public class AddText extends TestBase {
 	@Parameters({ "sikuli" })	
 	@Test
 		public void addStyle(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.addImageArticle);
-		ArticleHelper.setCursor(ArticleHelper.emptyArticle);	
-		AddHelper.addThroughContextMenu(ArticleHelper.emptyArticle, AddHelper.addText);	  
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.addImage);
+		ArticleHelper.setCursor(ArticleHelper.empty);	
+		AddHelper.addThroughContextMenu(ArticleHelper.empty, AddHelper.addText);	  
 		screen.paste("Пример текста");
 		ObjectHelper.clickButton(AddHelper.addSubObjectPlusButton);
 		TextHelper.createStyleName();

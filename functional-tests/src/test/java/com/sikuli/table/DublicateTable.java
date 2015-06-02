@@ -21,8 +21,8 @@ public class DublicateTable extends TestBase {
 	@Parameters({ "sikuli" })
 	@Test
 	public void dublicateTable(String sikuli) throws FindFailed, InterruptedException, AWTException{		
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.checkBoxTestArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.checkBoxTest);
 		DublicateHelper.dublicateObject(CheckBoxTestHelper.checkBoxTestWithFourVariants, TestHelper.idTest, AudioHelper.textString);
 		ObjectHelper.finalCheck(tableDublicationCheck);			
 	}

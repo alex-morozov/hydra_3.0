@@ -22,8 +22,8 @@ public class EditTest extends TestBase {
 	@Parameters({ "sikuli" })	
 	@Test
 		public void cancelEditTest(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.checkBoxTestArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.checkBoxTest);
 		TestHelper.editTest(CheckBoxTestHelper.checkBoxTestWithFourVariants);
 		ObjectHelper.cancel();		
 		ObjectHelper.finalCheck(CheckBoxTestHelper.checkBoxTestWithFourVariants);	    
@@ -32,8 +32,8 @@ public class EditTest extends TestBase {
 	@Parameters({ "sikuli" })	
 	@Test
 		public void changeNumberOfVariantsRadioButtonTest(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.radioButtonTestArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.radioButtonTest);
 		TestHelper.editTest(RadioButtonTestHelper.testWithThreeVariants);
 		TestHelper.changeNumberOfVariants("4");
 		ObjectHelper.confirm();
@@ -45,8 +45,8 @@ public class EditTest extends TestBase {
 	@Parameters({ "sikuli" })	
 	@Test
 		public void changeNumberOfVariantsCheckBoxTest(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.checkBoxTestArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.checkBoxTest);
 		TestHelper.editTest(CheckBoxTestHelper.checkBoxTestWithFourVariants);
 		TestHelper.changeNumberOfVariants("2");
 		ObjectHelper.confirm();
@@ -57,8 +57,8 @@ public class EditTest extends TestBase {
 	@Parameters({ "sikuli" })	
 	@Test
 		public void changeNumberOfVariantsReorderingTest(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.reorderingTestArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.reorderingTest);
 		TestHelper.editTest(ReorderingTestHelper.reorderingTestWithFiveVariants);
 		TestHelper.changeNumberOfVariants("3");
 		ObjectHelper.confirm();
@@ -69,8 +69,8 @@ public class EditTest extends TestBase {
 	@Parameters({ "sikuli" })	
 	@Test
 		public void editCorrectAnswerFreeAnswerTest(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.freeAnswerTestArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.freeAnswerTest);
 		TestHelper.editTest(FreeAnswerTestHelper.freeAnswerTestTytle);
 		FreeAnswerTestHelper.addAnswer();
 		ObjectHelper.confirm();
@@ -82,8 +82,8 @@ public class EditTest extends TestBase {
 	@Parameters({ "sikuli" })	
 	@Test
 		public void deletetAnswerFreeAnswerTest(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.freeAnswerTestArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.freeAnswerTest);
 		TestHelper.editTest(FreeAnswerTestHelper.freeAnswerTestTytle);
 		FreeAnswerTestHelper.deleteAnswer();
 		ObjectHelper.confirm();
@@ -95,8 +95,8 @@ public class EditTest extends TestBase {
 	@Parameters({ "sikuli" })	
 	@Test
 		public void changeCorrectAnswerRadioButtonTest(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.radioButtonTestArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.radioButtonTest);
 		TestHelper.editTest(RadioButtonTestHelper.testWithThreeVariants);
 		RadioButtonTestHelper.changeCorrectAnswer();
 		ObjectHelper.confirm();		
@@ -109,8 +109,8 @@ public class EditTest extends TestBase {
 	@Parameters({ "sikuli" })	
 	@Test
 		public void changeCorrectAnswerCheckBoxTest(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.checkBoxTestArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.checkBoxTest);
 		TestHelper.editTest(CheckBoxTestHelper.checkBoxTestWithFourVariants);
 		CheckBoxTestHelper.changeCorrectAnswer();
 		ObjectHelper.confirm();		
@@ -123,8 +123,8 @@ public class EditTest extends TestBase {
 	@Parameters({ "sikuli" })	
 	@Test
 		public void changeCorrectAnswerReorderingTest(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.reorderingTestArticle);
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.reorderingTest);
 		TestHelper.editTest(ReorderingTestHelper.reorderingTestWithFiveVariants);
 		ReorderingTestHelper.changeCorrectOrder();
 		ObjectHelper.confirm();		
@@ -137,8 +137,8 @@ public class EditTest extends TestBase {
 	@Parameters({ "sikuli" })	
 	@Test
 		public void changeVariantText(String sikuli) throws FindFailed, InterruptedException, AWTException{
-		BookHelper.openBook(BookManager.image, BookManager.openBook);
-		ArticleHelper.openArticle(ArticleHelper.checkBoxTestArticle);		
+		BookHelper.openBook(BookManager.image, BookManager.openMainBook);
+		ArticleHelper.openArticle(ArticleHelper.checkBoxTest);		
 		TestHelper.changeVariantText();	    
 		ObjectHelper.finalCheck(TestHelper.changedVariantText);	  
 	}
